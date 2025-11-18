@@ -2,6 +2,18 @@
   "name": "@lxyak/api",
   "entries": [
     {
+      "version": "1.3.9",
+      "tag": "HEAD",
+      "date": "2025-11-18T08:50:21.755Z",
+      "comments": {
+        "patch": [
+          {
+            "comment": "包名修改"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.3.5",
       "tag": "HEAD",
       "date": "2025-07-08T03:18:23.623Z",
