@@ -1,4 +1,4 @@
-# @lxy/chat-taro-sdk
+# @lxyak/chat-taro-sdk
 
 ## 0.1.11 - 2025-03-21
 
