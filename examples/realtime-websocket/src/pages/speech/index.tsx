@@ -11,7 +11,7 @@ import {
   Card,
   Input,
 } from 'antd';
-import { WsSpeechClient, WsToolsUtils } from '@coze/api/ws-tools';
+import { WsSpeechClient, WsToolsUtils } from '@lxyak/api/ws-tools';
 import {
   SoundOutlined,
   PauseOutlined,

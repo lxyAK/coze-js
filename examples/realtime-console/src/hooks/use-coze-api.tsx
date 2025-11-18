@@ -5,7 +5,7 @@ import {
   type WorkSpace,
   type CloneVoiceReq,
   type Voice,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import {
   getBaseUrl,

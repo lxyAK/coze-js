@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { Input, Select, Form } from 'antd';
-import { WsToolsUtils } from '@coze/api/ws-tools';
+import { WsToolsUtils } from '@lxyak/api/ws-tools';
 
 import getConfig from '../../utils/config';
 

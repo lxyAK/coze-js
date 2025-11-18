@@ -1,5 +1,5 @@
 {
-  "name": "@coze/chat-sdk",
+  "name": "@lxyak/chat-taro-sdk",
   "entries": [
     {
       "version": "0.1.11",

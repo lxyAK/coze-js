@@ -14,11 +14,11 @@ import {
   type WsChatEventData,
   ClientEventType,
   type AudioSentencePlaybackStartEvent,
-} from '@coze/api/ws-tools';
+} from '@lxyak/api/ws-tools';
 import {
   type ConversationAudioTranscriptCompletedEvent,
   WebsocketsEventType,
-} from '@coze/api';
+} from '@lxyak/api';
 
 // 实时语音回复消息列表（音字同步模式）
 interface ChatMessage {

@@ -1,6 +1,6 @@
 import assert from 'assert';
 
-import { RoleType } from '@coze/api';
+import { RoleType } from '@lxyak/api';
 
 import { botId, client } from './client';
 

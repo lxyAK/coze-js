@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import assert from 'assert';
 
-import { ChatEventType, CozeAPI, RoleType } from '@coze/api';
+import { ChatEventType, CozeAPI, RoleType } from '@lxyak/api';
 
 import { botId, baseURL, apiKey } from './client';
 

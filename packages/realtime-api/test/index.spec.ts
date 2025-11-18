@@ -13,7 +13,7 @@ vi.mock('@volcengine/rtc/extension-ainr', () => ({
   })),
 }));
 
-vi.mock('@coze/api', () => ({
+vi.mock('@lxyak/api', () => ({
   CozeAPI: vi.fn().mockImplementation(() => ({
     audio: {
       rooms: {

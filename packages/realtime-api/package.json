@@ -47,7 +47,7 @@
     "test:cov": "vitest --coverage --run"
   },
   "dependencies": {
-    "@coze/api": "workspace:*",
+    "@lxyak/api": "workspace:*",
     "@volcengine/rtc": "~4.62.11"
   },
   "devDependencies": {

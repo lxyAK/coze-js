@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 import { RealtimeClient, RealtimeUtils } from '@coze/realtime-api';
-import { type OAuthToken, type SimpleBot } from '@coze/api';
+import { type OAuthToken, type SimpleBot } from '@lxyak/api';
 
 import useCozeAPI, {
   BASE_URL,

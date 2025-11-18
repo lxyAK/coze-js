@@ -1,4 +1,4 @@
-import { type ChatV3Message } from '@coze/api';
+import { type ChatV3Message } from '@lxyak/api';
 
 import { type IMiniChatError } from '../utils/error';
 import { RawMessage } from '../services/send-message';

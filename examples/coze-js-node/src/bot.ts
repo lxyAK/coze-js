@@ -1,6 +1,6 @@
 import assert from 'assert';
 
-import { SuggestReplyMode } from '@coze/api';
+import { SuggestReplyMode } from '@lxyak/api';
 
 import { client, sleep, spaceId } from './client';
 

@@ -5,7 +5,7 @@ import {
   getPKCEAuthenticationUrl,
   getPKCEOAuthToken,
   refreshOAuthToken,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import {
   getBaseUrl,

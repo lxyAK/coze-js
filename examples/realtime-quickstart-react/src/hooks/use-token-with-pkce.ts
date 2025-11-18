@@ -1,4 +1,4 @@
-import { type OAuthToken } from '@coze/api';
+import { type OAuthToken } from '@lxyak/api';
 
 const baseServerURL = 'http://localhost:3003';
 const redirectUrl = window.location.origin;

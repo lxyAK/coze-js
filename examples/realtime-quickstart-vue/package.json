@@ -17,8 +17,8 @@
     "not ie 11"
   ],
   "dependencies": {
-    "@coze/api": "workspace:*",
     "@coze/realtime-api": "workspace:*",
+    "@lxyak/api": "workspace:*",
     "@volcengine/rtc": "~4.62.11",
     "ant-design-vue": "^4.2.6",
     "core-js": "^3.39.0",

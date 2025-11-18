@@ -1,4 +1,4 @@
-import { CozeAPI, type Voice } from '@coze/api';
+import { CozeAPI, type Voice } from '@lxyak/api';
 
 import getConfig from '../../utils/config';
 import { getTokenByCookie } from '../../utils';

@@ -12,7 +12,7 @@ import {
   getDeviceCode,
   getDeviceToken,
   refreshOAuthToken,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import { streamingChat } from '../utils';
 import config from '../config/config';

@@ -16,14 +16,14 @@ import {
   AIDenoiserProcessorLevel,
   WsSimultInterpretationClient,
   PcmPlayer,
-} from '@coze/api/ws-tools';
+} from '@lxyak/api/ws-tools';
 import {
   type CommonErrorEvent,
   type SimultInterpretationAudioDeltaEvent,
   type SimultInterpretationTranscriptionDeltaEvent,
   type SimultInterpretationTranslationDeltaEvent,
   WebsocketsEventType,
-} from '@coze/api';
+} from '@lxyak/api';
 import {
   AudioOutlined,
   PauseOutlined,

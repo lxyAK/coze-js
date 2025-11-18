@@ -38,7 +38,6 @@
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@coze/api": "workspace:*",
     "@coze/uniapp-api": "workspace:*",
     "@dcloudio/uni-app": "3.0.0-4030620241128001",
     "@dcloudio/uni-app-harmony": "3.0.0-4030620241128001",
@@ -55,6 +54,7 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-4030620241128001",
     "@dcloudio/uni-mp-xhs": "3.0.0-4030620241128001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-4030620241128001",
+    "@lxyak/api": "workspace:*",
     "axios": "^1.7.7",
     "reconnecting-websocket": "^4.4.0",
     "vue": "^3.0.0",

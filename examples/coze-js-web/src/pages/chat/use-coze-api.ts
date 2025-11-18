@@ -7,7 +7,7 @@ import {
   getWebAuthenticationUrl,
   getPKCEAuthenticationUrl,
   type OAuthToken,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import { type SettingConfig } from './setting';
 

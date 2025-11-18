@@ -41,7 +41,7 @@
     "test:cov": "vitest --coverage --run"
   },
   "dependencies": {
-    "@coze/api": "workspace:*"
+    "@lxyak/api": "workspace:*"
   },
   "devDependencies": {
     "@coze-infra/eslint-config": "workspace:*",

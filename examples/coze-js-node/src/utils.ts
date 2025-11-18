@@ -5,7 +5,7 @@ import {
   type CreateChatData,
   RoleType,
   type StreamChatData,
-} from '@coze/api';
+} from '@lxyak/api';
 
 export async function nonStreamingChat({
   client,

@@ -6,7 +6,7 @@ import {
   CozeAPI,
   type EnterMessage,
   RoleType,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import { WavStreamPlayer } from '../../lib/wavtools';
 import { config } from './config';

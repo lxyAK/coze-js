@@ -8,7 +8,7 @@ import {
   type OAuthToken,
   type WorkSpace,
   type SimpleBot,
-} from '@coze/api';
+} from '@lxyak/api';
 
 export interface VoiceOption {
   label: React.ReactNode;

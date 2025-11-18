@@ -1,8 +1,8 @@
 
 # Coze API SDK
-[![npm version](https://img.shields.io/npm/v/%40coze%2Fapi)](https://www.npmjs.com/package/@coze/api)
-[![npm downloads](https://img.shields.io/npm/dm/%40coze%2Fapi)](https://www.npmjs.com/package/@coze/api)
-[![bundle size](https://img.shields.io/bundlephobia/min/%40coze%2Fapi)](https://bundlephobia.com/package/@coze/api)
+[![npm version](https://img.shields.io/npm/v/%40coze%2Fapi)](https://www.npmjs.com/package/@lxyak/api)
+[![npm downloads](https://img.shields.io/npm/dm/%40coze%2Fapi)](https://www.npmjs.com/package/@lxyak/api)
+[![bundle size](https://img.shields.io/bundlephobia/min/%40coze%2Fapi)](https://bundlephobia.com/package/@lxyak/api)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 English | [简体中文](./README.zh-CN.md)
@@ -15,15 +15,15 @@ Official Node.js and Browser SDK for [Coze](https://www.coze.com)（or [扣子](
 
 
 ```sh
-npm install @coze/api
+npm install @lxyak/api
 # or
-pnpm install @coze/api
+pnpm install @lxyak/api
 ```
 
 ### 2. Basic Usage
 
 ```javascript
-import { CozeAPI, COZE_COM_BASE_URL, ChatStatus, RoleType } from '@coze/api';
+import { CozeAPI, COZE_COM_BASE_URL, ChatStatus, RoleType } from '@lxyak/api';
 
 // Initialize client with your Personal Access Token
 const client = new CozeAPI({
@@ -108,7 +108,7 @@ const client = new CozeAPI({
 
 ### Streaming Chat
 ```javascript
-import { CozeAPI, ChatEventType, RoleType } from '@coze/api';
+import { CozeAPI, ChatEventType, RoleType } from '@lxyak/api';
 
 async function streamChat() {
   const stream = await client.chat.stream({
@@ -130,7 +130,7 @@ async function streamChat() {
 
 ### Websocket Chat
 ```javascript
-import { CozeAPI, RoleType, WebsocketsEventType } from '@coze/api';
+import { CozeAPI, RoleType, WebsocketsEventType } from '@lxyak/api';
 
 async function wsChat() {
   const ws = await client.websockets.chat.create('your_bot_id');
@@ -194,8 +194,8 @@ async function wsChat() {
 if you want to use the realtime chat sdk in web, you can use the following code:
 Online Demo: URL_ADDRESS.coze.cn/open-platform/realtime/websocket
 ```typescript
-import { WsChatClient, WsChatEventNames, type WsChatEventData } from '@coze/api/ws-tools';
-import { WebsocketsEventType, RoleType } from '@coze/api';
+import { WsChatClient, WsChatEventNames, type WsChatEventData } from '@lxyak/api/ws-tools';
+import { WebsocketsEventType, RoleType } from '@lxyak/api';
 
 try {
   // Initialize
@@ -262,8 +262,8 @@ const client = new CozeAPI({
 ### Websocket Speech SDK
 Online Demo: Online Demo: URL_ADDRESS.coze.cn/open-platform/realtime/websocket#speech
 ```javascript
-import { WsSpeechClient } from '@coze/api/ws-tools';
-import { WebsocketsEventType } from '@coze/api';
+import { WsSpeechClient } from '@lxyak/api/ws-tools';
+import { WebsocketsEventType } from '@lxyak/api';
 // Initialize
 const client = new WsSpeechClient({
   token: 'your_pat_token',
@@ -328,8 +328,8 @@ client.complete();
 ### Websocket Transcriptions SDK
 Online Demo: https://www.coze.cn/open-platform/realtime/websocket#transcription
 ```javascript
-import { WsTranscriptionClient } from '@coze/api/ws-tools';
-import { WebsocketsEventType } from '@coze/api';
+import { WsTranscriptionClient } from '@lxyak/api/ws-tools';
+import { WebsocketsEventType } from '@lxyak/api';
 // Initialize
 const client = new WsTranscriptionClient({
   token: 'your_pat_token',

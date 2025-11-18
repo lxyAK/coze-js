@@ -14,7 +14,7 @@ import {
   type WsChatClient,
   WsToolsUtils,
   type WsTranscriptionClient,
-} from '@coze/api/ws-tools';
+} from '@lxyak/api/ws-tools';
 import { InfoCircleOutlined } from '@ant-design/icons';
 
 // 定义 ref 暴露的方法和状态接口

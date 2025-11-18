@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import fs from 'fs';
 
-import { type Voice } from '@coze/api';
+import { type Voice } from '@lxyak/api';
 
 import { client } from './client';
 

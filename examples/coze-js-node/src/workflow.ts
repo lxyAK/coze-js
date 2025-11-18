@@ -5,7 +5,7 @@ import {
   type WorkflowEvent,
   type WorkflowEventInterrupt,
   WorkflowEventType,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import { client, botId, workflowId } from './client';
 async function streamWorkflow() {

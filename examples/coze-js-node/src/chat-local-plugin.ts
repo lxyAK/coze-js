@@ -5,7 +5,7 @@ import {
   type StreamChatData,
   type ToolCallType,
   type ToolOutputType,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import { client, botId } from './client';
 

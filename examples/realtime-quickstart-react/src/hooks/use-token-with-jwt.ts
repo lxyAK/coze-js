@@ -1,4 +1,4 @@
-import { type JWTToken } from '@coze/api';
+import { type JWTToken } from '@lxyak/api';
 
 const baseServerURL = 'http://localhost:3001';
 

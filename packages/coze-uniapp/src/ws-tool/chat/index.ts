@@ -2,7 +2,7 @@ import {
   type ChatUpdateEvent,
   type TurnDetectionType,
   WebsocketsEventType,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import { PcmRecorder, RecordingStatus } from '../pcm-recorder';
 import { WsChatEventNames } from './event-names';

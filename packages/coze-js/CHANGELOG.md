@@ -1,4 +1,4 @@
-# @coze/api
+# @lxyak/api
 
 ## 1.3.5 - 2025-07-08
 
@@ -84,7 +84,7 @@
 - Add WsChatClient  API
 - fix ci bug
 - Add screen sharing event support and downgrade RTC SDK
-- typo issue for chat api in @coze/api
+- typo issue for chat api in @lxyak/api
 -  feat: Implement playback volume control
 
 ### Bug Fixes
@@ -218,7 +218,7 @@
 - add translation api
 - Add description and space_id parameters to voices.clone api
 - coze-js remove import .js
-- @coze/api 源码引入到coze-js-web、coze-js-node
+- @lxyak/api 源码引入到coze-js-web、coze-js-node
 - rebase 0109
 - cozePublishConfig
 - rebase 0113

@@ -53,7 +53,7 @@
     "test": "exit 0"
   },
   "dependencies": {
-    "@coze/api": "workspace:*"
+    "@lxyak/api": "workspace:*"
   },
   "devDependencies": {
     "@coze-infra/eslint-config": "workspace:*",

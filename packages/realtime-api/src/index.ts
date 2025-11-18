@@ -12,7 +12,7 @@ import {
   type CreateRoomReq,
   type TranslateConfig,
   type CreateRoomTurnDetection,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import * as RealtimeUtils from './utils';
 import { isScreenShareDevice } from './utils';

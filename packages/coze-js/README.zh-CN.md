@@ -1,7 +1,7 @@
 # Coze API SDK
-[![npm version](https://img.shields.io/npm/v/%40coze%2Fapi)](https://www.npmjs.com/package/@coze/api)
-[![npm downloads](https://img.shields.io/npm/dm/%40coze%2Fapi)](https://www.npmjs.com/package/@coze/api)
-[![bundle size](https://img.shields.io/bundlephobia/min/%40coze%2Fapi)](https://bundlephobia.com/package/@coze/api)
+[![npm version](https://img.shields.io/npm/v/%40coze%2Fapi)](https://www.npmjs.com/package/@lxyak/api)
+[![npm downloads](https://img.shields.io/npm/dm/%40coze%2Fapi)](https://www.npmjs.com/package/@lxyak/api)
+[![bundle size](https://img.shields.io/bundlephobia/min/%40coze%2Fapi)](https://bundlephobia.com/package/@lxyak/api)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 [English](./README.md) | 简体中文
@@ -13,15 +13,15 @@
 ### 1. 安装
 
 ```sh
-npm install @coze/api
+npm install @lxyak/api
 # 或
-pnpm install @coze/api
+pnpm install @lxyak/api
 ```
 
 ### 2. 基本用法
 
 ```javascript
-import { CozeAPI, COZE_CN_BASE_URL, ChatStatus, RoleType } from '@coze/api';
+import { CozeAPI, COZE_CN_BASE_URL, ChatStatus, RoleType } from '@lxyak/api';
 
 // 使用个人访问令牌初始化客户端
 const client = new CozeAPI({
@@ -106,7 +106,7 @@ const client = new CozeAPI({
 
 ### 流式对话
 ```javascript
-import { CozeAPI, ChatEventType, RoleType } from '@coze/api';
+import { CozeAPI, ChatEventType, RoleType } from '@lxyak/api';
 
 async function streamChat() {
   const stream = await client.chat.stream({
@@ -128,7 +128,7 @@ async function streamChat() {
 
 ### 流式对话（Websocket）
 ```javascript
-import { CozeAPI, RoleType, WebsocketsEventType } from '@coze/api';
+import { CozeAPI, RoleType, WebsocketsEventType } from '@lxyak/api';
 
 async function wsChat() {
   const ws = await client.websockets.chat.create('your_bot_id');
@@ -193,8 +193,8 @@ async function wsChat() {
 基于Websocket的实时语音对话SDK，如果你使用 Web，推荐使用此 SDK
 在线 Demo: https://www.coze.cn/open-platform/realtime/websocket
 ```typescript
-import { WsChatClient, WsChatEventNames } from '@coze/api/ws-tools';
-import { RoleType } from '@coze/api';
+import { WsChatClient, WsChatEventNames } from '@lxyak/api/ws-tools';
+import { RoleType } from '@lxyak/api';
 
 try {
   // 初始化
@@ -262,8 +262,8 @@ const client = new CozeAPI({
 ### 语音合成 SDK
 在线 Demo: https://www.coze.cn/open-platform/realtime/websocket#speech
 ```javascript
-import { WebsocketsEventType } from '@coze/api';
-import { WsSpeechClient } from '@coze/api/ws-tools';
+import { WebsocketsEventType } from '@lxyak/api';
+import { WsSpeechClient } from '@lxyak/api/ws-tools';
 
 // 初始化
 const client = new WsSpeechClient({
@@ -327,8 +327,8 @@ client.complete();
 ### 语音识别 SDK
 在线 Demo: https://www.coze.cn/open-platform/realtime/websocket#transcription
 ```javascript
-import { WsTranscriptionClient } from '@coze/api/ws-tools';
-import { WebsocketsEventType } from '@coze/api';
+import { WsTranscriptionClient } from '@lxyak/api/ws-tools';
+import { WebsocketsEventType } from '@lxyak/api';
 // 初始化
 const client = new WsTranscriptionClient({
   token: 'your_pat_token',

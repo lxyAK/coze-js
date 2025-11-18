@@ -1,6 +1,6 @@
 import assert from 'assert';
 
-import { CozeAPI, ChatStatus, RoleType, ChatEventType } from '@coze/api';
+import { CozeAPI, ChatStatus, RoleType, ChatEventType } from '@lxyak/api';
 
 import { botId } from '../client';
 

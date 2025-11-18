@@ -1,4 +1,4 @@
-import { CozeAPI, ChatEventType, RoleType, COZE_CN_BASE_URL } from '@coze/api';
+import { CozeAPI, ChatEventType, RoleType, COZE_CN_BASE_URL } from '@lxyak/api';
 
 // 初始化 Coze 客户端
 function initClient(apiKey: string) {

@@ -4,8 +4,8 @@ import {
   WsChatClient,
   WsChatEventNames,
   WsToolsUtils,
-} from '@coze/api/ws-tools';
-import { WebsocketsEventType } from '@coze/api';
+} from '@lxyak/api/ws-tools';
+import { WebsocketsEventType } from '@lxyak/api';
 
 /**
  * 实时语音聊天Hook (Vue 2版本)

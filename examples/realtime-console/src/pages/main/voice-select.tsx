@@ -11,7 +11,7 @@ import {
   Upload,
   Input,
 } from 'antd';
-import { type CloneVoiceReq } from '@coze/api';
+import { type CloneVoiceReq } from '@lxyak/api';
 import {
   PlayCircleOutlined,
   CopyOutlined,

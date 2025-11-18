@@ -101,7 +101,7 @@ import {
   RealtimeError,
   RealtimeUtils,
 } from '@coze/realtime-api';
-import { CozeAPI, COZE_CN_BASE_URL, ChatEventType } from '@coze/api';
+import { CozeAPI, COZE_CN_BASE_URL, ChatEventType } from '@lxyak/api';
 import {
   useTokenWithPat,
   useTokenWithWeb,

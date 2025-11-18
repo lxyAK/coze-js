@@ -18,7 +18,7 @@ import {
   getPKCEAuthenticationUrl,
   getPKCEOAuthToken,
   refreshOAuthToken,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import config from '../config/config';
 

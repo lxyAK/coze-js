@@ -1,4 +1,4 @@
-import { RoleType } from '@coze/api';
+import { RoleType } from '@lxyak/api';
 
 import { CozeAPI } from '../src/api';
 

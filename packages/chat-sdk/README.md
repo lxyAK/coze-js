@@ -16,9 +16,9 @@ OverSea
 ### 1. Installation
 
 ```sh
-npm install @coze/chat-sdk
+npm install @lxyak/chat-taro-sdk
 # or
-pnpm install @coze/chat-sdk
+pnpm install @lxyak/chat-taro-sdk
 ```
 
 ### 2. Basic Usage
@@ -28,7 +28,7 @@ pnpm install @coze/chat-sdk
 
 ```javascript
 import { View } from "@tarojs/components";
-import { ChatFramework, ChatSlot, ChatType, Language } from "@coze/chat-sdk";
+import { ChatFramework, ChatSlot, ChatType, Language } from "@lxyak/chat-taro-sdk";
 
 export default function Index() {
   return (
@@ -67,8 +67,8 @@ export default function Index() {
 ##### For Web
 
 ```javascript
-import "@coze/chat-sdk/webCss";
-import ChatSdk from "@coze/chat-sdk/webJs";
+import "@lxyak/chat-taro-sdk/webCss";
+import ChatSdk from "@lxyak/chat-taro-sdk/webJs";
 const { ChatFramework, ChatSlot, ChatType, Language } = ChatSdk;
 
 export default function Index() {
@@ -158,7 +158,7 @@ export default function Index() {
 ##### For Taro
 ```javascript
 import { View } from "@tarojs/components";
-import { ChatFlowFramework, ChatSlot, ChatType, Language } from "@coze/chat-sdk";
+import { ChatFlowFramework, ChatSlot, ChatType, Language } from "@lxyak/chat-taro-sdk";
 
 export default function Index() {
   return (
@@ -227,8 +227,8 @@ export default function Index() {
 ##### For Web
 ```javascript
 import { View } from "@tarojs/components";
-import "@coze/chat-sdk/webCss";
-import ChatSdk from "@coze/chat-sdk/webJs";
+import "@lxyak/chat-taro-sdk/webCss";
+import ChatSdk from "@lxyak/chat-taro-sdk/webJs";
 const { ChatFlowFramework, ChatSlot, ChatType, Language } = ChatSdk;
 
 export default function Index() {

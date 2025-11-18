@@ -1,5 +1,5 @@
 {
-  "name": "@coze/api-web-example",
+  "name": "@lxyak/api-web-example",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -26,7 +26,7 @@
     "@ant-design/icons": "^5.5.1",
     "@ant-design/x": "~1.0.1",
     "@babel/core": "^7.16.0",
-    "@coze/api": "workspace:*",
+    "@lxyak/api": "workspace:*",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^5.5.0",
     "@types/lodash": "~4.17.13",

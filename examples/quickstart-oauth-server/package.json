@@ -14,8 +14,8 @@
     "start-web": "tsx src/web-oauth/index.ts"
   },
   "dependencies": {
-    "@coze/api": "workspace:*",
     "@koa/cors": "^3.2.0",
+    "@lxyak/api": "workspace:*",
     "axios": "^1.7.7",
     "koa": "^2.15.3",
     "koa-bodyparser": "^4.4.1",

@@ -1,4 +1,4 @@
-import { type OAuthToken } from '@coze/api';
+import { type OAuthToken } from '@lxyak/api';
 
 export const getTokenByCookie = async () => {
   try {

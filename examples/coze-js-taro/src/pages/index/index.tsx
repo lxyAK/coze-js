@@ -3,7 +3,7 @@ import { useState, useRef } from 'react';
 import { useLoad } from '@tarojs/taro';
 import { View, Text, Button, Switch } from '@tarojs/components';
 import { CozeAPI, AbortController } from '@coze/taro-api';
-import { RoleType, ChatEventType, WorkflowEventType } from '@coze/api';
+import { RoleType, ChatEventType, WorkflowEventType } from '@lxyak/api';
 import './index.css';
 
 export default function Index() {

@@ -1,4 +1,4 @@
-import { type WsToolsOptions } from '@coze/api/ws-tools';
+import { type WsToolsOptions } from '@lxyak/api/ws-tools';
 import {
   APIError,
   COZE_CN_BASE_WS_URL,
@@ -7,7 +7,7 @@ import {
   type ErrorRes,
   type WebSocketAPI,
   WebsocketsEventType,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import { PcmRecorder } from '../pcm-recorder';
 import { CozeAPI } from '../../api';

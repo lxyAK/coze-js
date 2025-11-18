@@ -7,11 +7,11 @@ import {
   type ErrorRes,
   type WebSocketAPI,
   WebsocketsEventType,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import { PcmStreamPlayer } from '../pcm-stream-player';
 import { CozeAPI } from '../../api';
-// Import types directly from @coze/api
+// Import types directly from @lxyak/api
 
 /**
  * WsSpeechClient for UniApp/WeChat Mini Program

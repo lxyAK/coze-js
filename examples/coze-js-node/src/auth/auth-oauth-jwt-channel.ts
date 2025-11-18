@@ -18,7 +18,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import fs from 'fs';
 
-import { CozeAPI, getJWTToken } from '@coze/api';
+import { CozeAPI, getJWTToken } from '@lxyak/api';
 
 import { streamingChat } from '../utils';
 import config from '../config/config';

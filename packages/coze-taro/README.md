@@ -11,15 +11,15 @@ Official [Taro](https://docs.taro.zone/docs/) SDK for [Coze](https://www.coze.co
 ### 1. Installation
 
 ```sh
-npm install @coze/taro-api @coze/api
+npm install @coze/taro-api @lxyak/api
 # or
-pnpm install @coze/taro-api @coze/api
+pnpm install @coze/taro-api @lxyak/api
 ```
 
 ### 2. Basic Usage
 
 ```javascript
-import { COZE_COM_BASE_URL, RoleType, ChatStatus } from '@coze/api';
+import { COZE_COM_BASE_URL, RoleType, ChatStatus } from '@lxyak/api';
 import { CozeAPI } from '@coze/taro-api';
 
 // Initialize client with your Personal Access Token
@@ -65,7 +65,7 @@ async function quickChat() {
 ### Streaming Chat
 
 ```javascript
-import { ChatEventType } from '@coze/api';
+import { ChatEventType } from '@lxyak/api';
 import { CozeAPI } from '@coze/taro-api';
 
 async function streamChat() {
@@ -91,7 +91,7 @@ async function streamChat() {
 ### Refresh token
 
 ```javascript
-import { COZE_COM_BASE_URL } from '@coze/api';
+import { COZE_COM_BASE_URL } from '@lxyak/api';
 import { CozeAPI } from '@coze/taro-api';
 
 const client = new CozeAPI({
@@ -106,7 +106,7 @@ const client = new CozeAPI({
 ### Abort streaming chat
 
 ```javascript
-import { ChatEventType } from '@coze/api';
+import { ChatEventType } from '@lxyak/api';
 import { CozeAPI, AbortController } from '@coze/taro-api';
 
 async function streamChat() {

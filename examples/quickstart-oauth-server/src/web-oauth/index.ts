@@ -9,7 +9,7 @@ import {
   getWebAuthenticationUrl,
   getWebOAuthToken,
   refreshOAuthToken,
-} from '@coze/api';
+} from '@lxyak/api';
 import { fileURLToPath } from 'url';
 
 // config file path

@@ -5,7 +5,7 @@ import bodyParser from 'koa-bodyparser';
 import cors from '@koa/cors';
 import fs from 'fs';
 import path, { dirname } from 'path';
-import { getJWTToken } from '@coze/api';
+import { getJWTToken } from '@lxyak/api';
 import { fileURLToPath } from 'url';
 
 const currentFilename = fileURLToPath(import.meta.url);

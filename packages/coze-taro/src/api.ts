@@ -11,7 +11,7 @@ import {
   CozeAPI as InnerCozeAPI,
   type ClientOptions as InnerClientOptions,
   APIError,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import { sharedMixins } from './mixins/shared';
 import { platformMixins } from './mixins/platform';

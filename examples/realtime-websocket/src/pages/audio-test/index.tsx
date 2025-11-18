@@ -1,8 +1,8 @@
 /* eslint-disable */
 import { useRef, useState, useEffect } from 'react';
-import { WsToolsUtils } from '@coze/api/ws-tools';
+import { WsToolsUtils } from '@lxyak/api/ws-tools';
 import { Button, Space, message, Select, List } from 'antd';
-import { PcmRecorder } from '@coze/api/ws-tools';
+import { PcmRecorder } from '@lxyak/api/ws-tools';
 import { AudioConfig, AudioConfigRef } from '../../components/audio-config';
 
 function WS() {

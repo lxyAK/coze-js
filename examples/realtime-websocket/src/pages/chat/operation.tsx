@@ -1,7 +1,7 @@
 import { type MutableRefObject, useState } from 'react';
 
 import { Button, message, Space } from 'antd';
-import { type WsChatClient } from '@coze/api/ws-tools';
+import { type WsChatClient } from '@lxyak/api/ws-tools';
 import {
   AudioOutlined,
   PauseOutlined,

@@ -2,7 +2,7 @@
  * How to use personal access token to init Coze client.
  */
 
-import { CozeAPI } from '@coze/api';
+import { CozeAPI } from '@lxyak/api';
 
 import config from '../config/config.default.js';
 

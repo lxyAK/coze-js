@@ -16,7 +16,7 @@ import {
   DisconnectOutlined,
 } from '@ant-design/icons';
 import { useLocation } from 'react-router-dom';
-import { RetrieveLiveData } from '@coze/api';
+import { RetrieveLiveData } from '@lxyak/api';
 import logo from '../../logo.svg';
 import { ConsoleLog } from '../main/console-log';
 import useIsMobile from '../../hooks/use-is-mobile';

@@ -11,15 +11,15 @@
 ### 1. 安装
 
 ```sh
-npm install @coze/taro-api @coze/api
+npm install @coze/taro-api @lxyak/api
 # 或
-pnpm install @coze/taro-api @coze/api
+pnpm install @coze/taro-api @lxyak/api
 ```
 
 ### 2. 基本用法
 
 ```javascript
-import { COZE_COM_BASE_URL, RoleType, ChatStatus } from '@coze/api';
+import { COZE_COM_BASE_URL, RoleType, ChatStatus } from '@lxyak/api';
 import { CozeAPI } from '@coze/taro-api';
 
 // 使用个人访问令牌初始化客户端
@@ -65,7 +65,7 @@ async function quickChat() {
 ### 流式对话
 
 ```javascript
-import { ChatEventType } from '@coze/api';
+import { ChatEventType } from '@lxyak/api';
 import { CozeAPI } from '@coze/taro-api';
 
 async function streamChat() {
@@ -91,7 +91,7 @@ async function streamChat() {
 ### 刷新令牌
 
 ```javascript
-import { COZE_COM_BASE_URL } from '@coze/api';
+import { COZE_COM_BASE_URL } from '@lxyak/api';
 import { CozeAPI } from '@coze/taro-api';
 
 const client = new CozeAPI({
@@ -106,7 +106,7 @@ const client = new CozeAPI({
 ### 中断流式对话
 
 ```javascript
-import { ChatEventType } from '@coze/api';
+import { ChatEventType } from '@lxyak/api';
 import { CozeAPI, AbortController } from '@coze/taro-api';
 
 async function streamChat() {

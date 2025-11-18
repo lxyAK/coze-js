@@ -23,7 +23,7 @@ npm install @coze/realtime-api
 
 ```typescript
 import { RealtimeClient, EventNames } from '@coze/realtime-api';
-import { RoomMode } from '@coze/api';
+import { RoomMode } from '@lxyak/api';
 ```
 
 ### 1.2 初始化客户端
@@ -217,7 +217,7 @@ console.log('客户端已关闭');
 ```typescript
 import { useState, useEffect, useRef } from 'react';
 import { WebLiveClient, ResourceStatus } from '@coze/realtime-api/live';
-import { RetrieveLiveData } from '@coze/api';
+import { RetrieveLiveData } from '@lxyak/api';
 
 function SimultaneousInterpretation() {
   // 状态管理

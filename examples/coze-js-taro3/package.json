@@ -19,8 +19,8 @@
   ],
   "dependencies": {
     "@babel/runtime": "^7.24.4",
-    "@coze/api": "workspace:*",
     "@coze/taro-api": "workspace:*",
+    "@lxyak/api": "workspace:*",
     "@tarojs/components": "3.6.35",
     "@tarojs/helper": "3.6.35",
     "@tarojs/plugin-framework-vue3": "3.6.35",

@@ -9,15 +9,15 @@
 ### 1. 安装
 
 ```sh
-npm install @coze/uniapp-api @coze/api axios reconnecting-websocket
+npm install @coze/uniapp-api @lxyak/api axios reconnecting-websocket
 # or
-pnpm install @coze/uniapp-api @coze/api axios reconnecting-websocket
+pnpm install @coze/uniapp-api @lxyak/api axios reconnecting-websocket
 ```
 
 ### 2. 基本用法
 
 ```javascript
-import { COZE_COM_BASE_URL, RoleType, ChatStatus } from '@coze/api';
+import { COZE_COM_BASE_URL, RoleType, ChatStatus } from '@lxyak/api';
 import { CozeAPI } from '@coze/uniapp-api';
 
 // 使用个人访问令牌初始化客户端
@@ -63,7 +63,7 @@ async function quickChat() {
 ### 流式聊天
 
 ```javascript
-import { ChatEventType } from '@coze/api';
+import { ChatEventType } from '@lxyak/api';
 import { CozeAPI } from '@coze/uniapp-api';
 
 async function streamChat() {
@@ -89,7 +89,7 @@ async function streamChat() {
 ### 刷新令牌
 
 ```javascript
-import { COZE_COM_BASE_URL } from '@coze/api';
+import { COZE_COM_BASE_URL } from '@lxyak/api';
 import { CozeAPI } from '@coze/uniapp-api';
 
 const client = new CozeAPI({
@@ -104,7 +104,7 @@ const client = new CozeAPI({
 ### 中止流式聊天
 
 ```javascript
-import { ChatEventType } from '@coze/api';
+import { ChatEventType } from '@lxyak/api';
 import { CozeAPI, AbortController } from '@coze/uniapp-api';
 
 async function streamChat() {
@@ -144,7 +144,7 @@ async function streamChat() {
 import type {
   ConversationMessageCompletedEvent,
   ConversationMessageDeltaEvent,
-} from '@coze/api';
+} from '@lxyak/api';
 import { WsChatClient, WsChatEventNames } from '@coze/uniapp-api/ws-tools';
 
 // 创建实例
@@ -277,7 +277,7 @@ import {
   type CommonErrorEvent,
   type TranscriptionsMessageCompletedEvent,
   type TranscriptionsMessageUpdateEvent,
-} from '@coze/api';
+} from '@lxyak/api';
 import { WsTranscriptionClient } from '@coze/uniapp-api/ws-tools';
 
 // 创建实例

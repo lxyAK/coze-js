@@ -8,7 +8,7 @@ import {
   RealtimeUtils,
 } from '@coze/realtime-api';
 import { Button, Space, List, message } from 'antd';
-import { CozeAPI, COZE_CN_BASE_URL, ChatEventType } from '@coze/api';
+import { CozeAPI, COZE_CN_BASE_URL, ChatEventType } from '@lxyak/api';
 import {
   useTokenWithPat,
   useTokenWithDevice,

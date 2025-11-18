@@ -1,5 +1,5 @@
 import { Modal } from 'antd';
-import { type OAuthToken, refreshOAuthToken } from '@coze/api';
+import { type OAuthToken, refreshOAuthToken } from '@lxyak/api';
 
 import { LocalManager, LocalStorageKey } from './local-manager';
 import { DEFAULT_OAUTH_CLIENT_ID } from './constants';

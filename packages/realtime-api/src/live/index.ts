@@ -1,4 +1,4 @@
-import { COZE_CN_BASE_URL, CozeAPI } from '@coze/api';
+import { COZE_CN_BASE_URL, CozeAPI } from '@lxyak/api';
 
 // WTN服务基础URL
 const WTN_BASE_URL = 'https://wtn.volcvideo.com';

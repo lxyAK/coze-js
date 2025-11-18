@@ -26,7 +26,7 @@ import {
   PcmPlayer,
   WsToolsUtils,
   WsSimultInterpretationClient,
-} from '@coze/api/ws-tools';
+} from '@lxyak/api/ws-tools';
 import './popup.css';
 import {
   type CommonErrorEvent,
@@ -34,7 +34,7 @@ import {
   type SimultInterpretationTranscriptionDeltaEvent,
   type SimultInterpretationTranslationDeltaEvent,
   WebsocketsEventType,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import EventInput from './event-input';
 

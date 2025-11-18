@@ -3,7 +3,7 @@ import { dirname, join } from 'path';
 import fs from 'fs';
 
 import Speaker from 'speaker';
-import { RoleType, WebsocketsEventType } from '@coze/api';
+import { RoleType, WebsocketsEventType } from '@lxyak/api';
 
 import { client, botId } from '../client';
 

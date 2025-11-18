@@ -5,7 +5,7 @@ import bodyParser from 'koa-bodyparser';
 import cors from '@koa/cors';
 import fs from 'fs';
 import path, { dirname } from 'path';
-import { getDeviceCode, getDeviceToken, refreshOAuthToken } from '@coze/api';
+import { getDeviceCode, getDeviceToken, refreshOAuthToken } from '@lxyak/api';
 import { fileURLToPath } from 'url';
 
 // config file path

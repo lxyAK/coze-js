@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 
 import { Layout, Row, Col, Card, Input, List, Button } from 'antd';
-import { PcmPlayer } from '@coze/api/ws-tools';
+import { PcmPlayer } from '@lxyak/api/ws-tools';
 import {
   type CreateChatWsReq,
   type CreateChatWsRes,
@@ -11,7 +11,7 @@ import {
   COZE_CN_BASE_URL,
   COZE_CN_BASE_WS_URL,
   WebsocketsEventType,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import getConfig from '../../utils/config';
 import Transcription, { type TranscriptionDemoRef } from './transcription';

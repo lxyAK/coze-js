@@ -10,7 +10,7 @@ import {
 import { AudioOutlined, AudioMutedOutlined } from '@ant-design/icons';
 
 import '../../App.css';
-import { ChatEventType, CreateRoomTurnDetectionType } from '@coze/api';
+import { ChatEventType, CreateRoomTurnDetectionType } from '@lxyak/api';
 
 import { isShowVideo } from '../../utils/utils';
 import { LocalManager, LocalStorageKey } from '../../utils/local-manager';

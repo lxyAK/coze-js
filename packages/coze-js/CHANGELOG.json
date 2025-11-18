@@ -1,5 +1,5 @@
 {
-  "name": "@coze/api",
+  "name": "@lxyak/api",
   "entries": [
     {
       "version": "1.3.5",
@@ -257,7 +257,7 @@
             "comment": "Add screen sharing event support and downgrade RTC SDK"
           },
           {
-            "comment": "typo issue for chat api in @coze/api"
+            "comment": "typo issue for chat api in @lxyak/api"
           },
           {
             "comment": " feat: Implement playback volume control"
@@ -516,7 +516,7 @@
             "comment": "coze-js remove import .js"
           },
           {
-            "comment": "@coze/api 源码引入到coze-js-web、coze-js-node"
+            "comment": "@lxyak/api 源码引入到coze-js-web、coze-js-node"
           },
           {
             "comment": "rebase 0109"

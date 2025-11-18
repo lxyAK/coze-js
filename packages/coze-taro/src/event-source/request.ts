@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-magic-numbers -- ignore */
 import { type AxiosResponseHeaders } from 'axios';
 import { getEnv } from '@tarojs/taro';
-import { APIError, type ErrorRes } from '@coze/api';
+import { APIError, type ErrorRes } from '@lxyak/api';
 
 import { Deferred } from '../helpers/async';
 import { type RequestConfig, EventName } from './types';

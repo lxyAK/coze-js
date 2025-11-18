@@ -9,7 +9,7 @@ import {
   Space,
   Tooltip,
 } from 'antd';
-import { WebsocketsEventType, type CreateChatData } from '@coze/api';
+import { WebsocketsEventType, type CreateChatData } from '@lxyak/api';
 import { type MessageInfo } from '@ant-design/x/es/useXChat';
 import {
   Attachments,

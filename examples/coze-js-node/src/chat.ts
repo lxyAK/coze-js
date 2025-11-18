@@ -5,7 +5,7 @@ import {
   ChatStatus,
   type CreateChatData,
   RoleType,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import { client, botId, sleep } from './client';
 

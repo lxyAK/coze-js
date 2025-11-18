@@ -19,7 +19,7 @@ import {
   AuthenticationError,
   RoomMode,
   CreateRoomTurnDetectionType,
-} from '@coze/api';
+} from '@lxyak/api';
 import {
   RobotOutlined,
   InfoCircleOutlined,

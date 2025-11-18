@@ -79,7 +79,7 @@
 - React, ReactDOM
 - Ant Design
 - @ant-design/icons
-- @coze/api
+- @lxyak/api
 - Vite（构建工具）
 - TypeScript
 

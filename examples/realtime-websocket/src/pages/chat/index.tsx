@@ -19,11 +19,11 @@ import {
   WsChatClient,
   WsChatEventNames,
   WsToolsUtils,
-} from '@coze/api/ws-tools';
+} from '@lxyak/api/ws-tools';
 import {
   type CommonErrorEvent,
   type ConversationAudioTranscriptUpdateEvent,
-} from '@coze/api';
+} from '@lxyak/api';
 import { AudioOutlined, SoundOutlined, SoundFilled } from '@ant-design/icons';
 
 import getConfig from '../../utils/config';

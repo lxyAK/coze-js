@@ -1,4 +1,4 @@
-import { WebsocketsEventType } from '@coze/api';
+import { WebsocketsEventType } from '@lxyak/api';
 
 import BaseWsTranscriptionClient from './base';
 import { RecordingStatus } from '../pcm-recorder';

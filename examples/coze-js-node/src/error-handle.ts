@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 import assert from 'assert';
 
-import { type APIError, CozeAPI } from '@coze/api';
+import { type APIError, CozeAPI } from '@lxyak/api';
 
 import { apiKey, baseURL, client, spaceId } from './client';
 

@@ -22,12 +22,12 @@ import {
   WsTranscriptionClient,
   AIDenoiserProcessorMode,
   AIDenoiserProcessorLevel,
-} from '@coze/api/ws-tools';
+} from '@lxyak/api/ws-tools';
 import {
   type CommonErrorEvent,
   type TranscriptionsMessageUpdateEvent,
   WebsocketsEventType,
-} from '@coze/api';
+} from '@lxyak/api';
 import {
   AudioOutlined,
   PauseOutlined,

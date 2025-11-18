@@ -2,7 +2,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import fs from 'fs';
 
-import { RoleType } from '@coze/api';
+import { RoleType } from '@lxyak/api';
 
 import { handleStream } from './utils';
 import { client, botId } from './client';

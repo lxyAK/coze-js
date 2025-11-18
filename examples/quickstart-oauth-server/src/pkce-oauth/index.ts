@@ -9,7 +9,7 @@ import {
   getPKCEAuthenticationUrl,
   getPKCEOAuthToken,
   refreshOAuthToken,
-} from '@coze/api';
+} from '@lxyak/api';
 import { fileURLToPath } from 'url';
 import crypto from 'crypto';
 import createSession from 'koa-session';

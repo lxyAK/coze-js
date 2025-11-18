@@ -19,7 +19,7 @@ import {
   type RoomMode,
   type APIError,
   CreateRoomTurnDetectionType,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import {
   getBaseUrl,

@@ -2,7 +2,7 @@ import {
   type WsChatCallbackHandler,
   type WsChatEventData,
   type WsToolsOptions,
-} from '@coze/api/ws-tools';
+} from '@lxyak/api/ws-tools';
 import {
   APIError,
   COZE_CN_BASE_WS_URL,
@@ -12,7 +12,7 @@ import {
   RoleType,
   type WebSocketAPI,
   WebsocketsEventType,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import PcmStreamPlayer from '../pcm-stream-player';
 import { CozeAPI } from '../../api';

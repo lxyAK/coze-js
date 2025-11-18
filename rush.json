@@ -403,16 +403,16 @@
       "projectFolder": "infra/package-audit"
     },
     {
-      "packageName": "@coze/api",
+      "packageName": "@lxyak/api",
       "projectFolder": "packages/coze-js",
       "shouldPublish": true
     },
     {
-      "packageName": "@coze/api-node-example",
+      "packageName": "@lxyak/api-node-example",
       "projectFolder": "examples/coze-js-node"
     },
     {
-      "packageName": "@coze/api-web-example",
+      "packageName": "@lxyak/api-web-example",
       "projectFolder": "examples/coze-js-web"
     },
     {
@@ -436,7 +436,7 @@
       "packageName": "@lxyak/chat-taro-sdk",
       "projectFolder": "packages/chat-sdk",
       "shouldPublish": true,
-      "decoupledLocalDependencies": ["@coze/api"]
+      "decoupledLocalDependencies": ["@lxyak/api"]
     },
     {
       "packageName": "@coze/taro-api",

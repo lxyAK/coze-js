@@ -1,5 +1,5 @@
 {
-  "name": "@coze/api-node-example",
+  "name": "@lxyak/api-node-example",
   "version": "1.0.0",
   "description": "coze-api node example",
   "license": "ISC",
@@ -11,7 +11,7 @@
     "run-preinstall": "node scripts/preinstall.js"
   },
   "dependencies": {
-    "@coze/api": "workspace:*",
+    "@lxyak/api": "workspace:*",
     "axios": "^1.7.7",
     "express": "^4.18.2",
     "http-proxy-middleware": "^3.0.3",

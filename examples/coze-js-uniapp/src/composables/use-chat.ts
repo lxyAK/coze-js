@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ref } from 'vue';
 import { AbortController } from '@coze/uniapp-api';
-import { RoleType, ChatEventType } from '@coze/api';
+import { RoleType, ChatEventType } from '@lxyak/api';
 
 import { cozeClient } from '../api/client';
 

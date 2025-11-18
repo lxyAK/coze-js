@@ -6,7 +6,7 @@ import {
   type CommonErrorEvent,
   type TranscriptionsMessageCompletedEvent,
   type TranscriptionsMessageUpdateEvent,
-} from '@coze/api';
+} from '@lxyak/api';
 
 /**
  * Composable for handling speech-to-text transcription

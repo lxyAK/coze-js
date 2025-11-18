@@ -1,5 +1,5 @@
 /// <reference types="node" />
-import { CozeAPI } from '@coze/api';
+import { CozeAPI } from '@lxyak/api';
 
 import config from './config/config';
 

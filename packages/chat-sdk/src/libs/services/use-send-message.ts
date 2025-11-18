@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 
-import { type EnterMessage } from '@coze/api';
+import { type EnterMessage } from '@lxyak/api';
 
 import { showToast } from '@/libs/utils';
 import { useApiClientStore, useUserInfoStore } from '@/libs/provider';

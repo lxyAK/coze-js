@@ -1,4 +1,4 @@
-import { type DeviceCodeData, type OAuthToken } from '@coze/api';
+import { type DeviceCodeData, type OAuthToken } from '@lxyak/api';
 
 const baseServerURL = 'http://localhost:3002';
 const workspaceId = ''; // 如果是协作处授权（OBO），需要设置 workspaceId

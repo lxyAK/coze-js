@@ -8,7 +8,7 @@ import {
   type EnterMessage,
   type FileObject,
   RoleType,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import { config } from './config';
 

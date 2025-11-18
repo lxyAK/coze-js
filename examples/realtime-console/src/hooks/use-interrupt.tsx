@@ -1,7 +1,7 @@
 import { type MutableRefObject, useCallback, useEffect, useRef } from 'react';
 
 import { EventNames, RealtimeClient } from '@coze/realtime-api';
-import { APIError } from '@coze/api';
+import { APIError } from '@lxyak/api';
 
 import { getBaseUrl, getOrRefreshToken } from '../utils/utils';
 import { LocalManager, LocalStorageKey } from '../utils/local-manager';

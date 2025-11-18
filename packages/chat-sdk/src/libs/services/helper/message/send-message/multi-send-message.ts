@@ -1,4 +1,4 @@
-import { type EnterMessage, RoleType, type ObjectStringItem } from '@coze/api';
+import { type EnterMessage, RoleType, type ObjectStringItem } from '@lxyak/api';
 
 import {
   convertToMinChatError,

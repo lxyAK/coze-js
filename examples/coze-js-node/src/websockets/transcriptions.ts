@@ -2,7 +2,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import fs from 'fs';
 
-import { WebsocketsEventType } from '@coze/api';
+import { WebsocketsEventType } from '@lxyak/api';
 
 import { client } from '../client';
 

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { ref } from 'vue';
 import { WsSpeechClient } from '@coze/uniapp-api/ws-tools';
-import { WebsocketsEventType } from '@coze/api';
+import { WebsocketsEventType } from '@lxyak/api';
 
 import { cozeClient } from '../api/client';
 

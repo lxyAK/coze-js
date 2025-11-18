@@ -1,6 +1,6 @@
 import { type MutableRefObject, useCallback, useEffect, useRef } from 'react';
 
-import { WsSpeechClient, WsTranscriptionClient } from '@coze/api/ws-tools';
+import { WsSpeechClient, WsTranscriptionClient } from '@lxyak/api/ws-tools';
 import {
   type CozeAPI,
   type CreateChatData,
@@ -9,7 +9,7 @@ import {
   type CreateTranscriptionsWsRes,
   type WebSocketAPI,
   WebsocketsEventType,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import { WavRecorder, WavStreamPlayer } from '../../lib/wavtools';
 import { config } from './config';

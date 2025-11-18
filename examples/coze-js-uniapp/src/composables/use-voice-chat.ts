@@ -6,7 +6,7 @@ import {
   type CommonErrorEvent,
   type ConversationAudioTranscriptCompletedEvent,
   type ConversationMessageDeltaEvent,
-} from '@coze/api';
+} from '@lxyak/api';
 
 /**
  * 实时语音聊天Hook

@@ -17,7 +17,7 @@
 <script>
 import { View, Text, Button, Switch } from '@tarojs/components';
 import { CozeAPI, AbortController } from '@coze/taro-api';
-import { RoleType, ChatEventType } from '@coze/api';
+import { RoleType, ChatEventType } from '@lxyak/api';
 import { ref } from 'vue';
 import './index.css';
 

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { View } from '@tarojs/components';
-import { RoleType } from '@coze/api';
+import { RoleType } from '@lxyak/api';
 
 import { nanoid } from '@/libs/utils';
 import UserIcon from '@/libs/ui-kit/assets/imgs/coze-logo.png';

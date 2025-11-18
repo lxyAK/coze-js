@@ -12,7 +12,7 @@ import {
   type FileObject,
   type EnterMessage,
   type ObjectStringItem,
-} from '@coze/api';
+} from '@lxyak/api';
 
 import { type Deferred } from '../helpers/async';
 import { sendRequest } from '../event-source/request';
