@@ -435,8 +435,8 @@
     {
       "packageName": "@lxyak/chat-taro-sdk",
       "projectFolder": "packages/chat-sdk",
-      "shouldPublish": true,
-      "decoupledLocalDependencies": ["@lxyak/api"]
+      "shouldPublish": true
+      // "decoupledLocalDependencies": ["@lxyak/api"]
     },
     {
       "packageName": "@coze/taro-api",
