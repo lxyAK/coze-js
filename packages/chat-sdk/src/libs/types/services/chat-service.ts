@@ -6,7 +6,7 @@ import type {
   CreateFileReq,
   FileObject,
   ChatV3Message,
-} from '@lxyak/api';
+} from '@coze/api';
 
 import type { ChatInfo, ChatType } from '@/libs/types';
 
