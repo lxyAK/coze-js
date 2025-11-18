@@ -2,9 +2,9 @@
   "name": "plugins",
   "version": "1.0.0",
   "private": true,
-  "author": "fanwenjie.fe@bytedance.com",
+  "author": "lxy17607146839@outlook.com",
   "maintainers": [
-    "fanwenjie.fe@bytedance.com"
+    "lxy17607146839@outlook.com"
   ],
   "dependencies": {
     "@coze-arch/rush-publish-plugin": "0.0.5",

@@ -15,7 +15,7 @@ jobs:
             OS: ubuntu-latest
     name: Node.js v${{ matrix.NodeVersionDisplayName }} (${{ matrix.OS }})
     runs-on: ${{ matrix.OS }}
-    if: github.repository == 'coze-dev/coze-js'
+    if: github.repository == 'lxyAK/coze-js'
     steps:
       - uses: actions/checkout@v4
         with:
@@ -23,7 +23,7 @@ jobs:
 
       - name: Config Git User
         run: |
-          git config --local user.name "tecvan"
+          git config --local user.name "lxyAK"
           git config --local user.email "tecvan.fe@gmail.com"
 
       - uses: actions/setup-node@v3

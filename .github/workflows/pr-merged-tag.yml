@@ -21,7 +21,7 @@ jobs:
             OS: ubuntu-latest
     name: Node.js v${{ matrix.NodeVersionDisplayName }} (${{ matrix.OS }})
     runs-on: ubuntu-latest
-    if: github.repository == 'coze-dev/coze-js'
+    if: github.repository == 'lxyAK/coze-js'
     steps:
       - uses: actions/checkout@v4
         with:
@@ -30,8 +30,8 @@ jobs:
 
       - name: Config Git User
         run: |
-          git config --local user.name "flow_bot"
-          git config --local user.email "flow_bot@bytedance.com"
+          git config --local user.name "lxyAK"
+          git config --local user.email "lxy17607146839@outlook.com"
 
       - name: Install jq
         run: sudo apt-get install jq

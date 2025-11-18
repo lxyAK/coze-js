@@ -1,7 +1,7 @@
 {
   "name": "@coze-infra/eslint-config",
   "version": "0.0.1",
-  "author": "fanwenjie.fe@bytedance.com",
+  "author": "lxy17607146839@outlook.com",
   "maintainers": [],
   "main": "src/index.js",
   "bin": {

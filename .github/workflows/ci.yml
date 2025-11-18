@@ -26,8 +26,8 @@ jobs:
       - name: Config Git User
         # should be turn to ci user
         run: |
-          git config --local user.name "tecvan"
-          git config --local user.email "fanwenjie.fe@bytedance.com"
+          git config --local user.name "lxyAK"
+          git config --local user.email "lxy17607146839@outlook.com"
 
       - uses: actions/setup-node@v3
         with:
