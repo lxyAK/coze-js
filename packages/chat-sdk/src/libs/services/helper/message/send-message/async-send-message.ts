@@ -183,9 +183,9 @@ export class AsyncSendMessage extends MultiSendMessage {
         }
       }
     } catch (error) {
-      // ! 注释测试效果
-      // logger.error('asyncChat pollAnswer error', error);
-      // this.sendErrorEvent(new MiniChatError(-1, this.i18n.t('sendFailed')));
+      // ! 错误消息在coze
+      logger.error('asyncChat pollAnswer error', error);
+      this.sendErrorEvent(new MiniChatError(-1, this.i18n.t('sendFailed')));
       return;
     }
   }

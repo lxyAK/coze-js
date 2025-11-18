@@ -1,5 +1,5 @@
 import { APIResource, type ErrorData } from '../resource';
-import { sleep } from '../../utils';
+import { sleep, safeJsonParse } from '../../utils';
 import { CozeError } from '../../error';
 import { type RequestOptions } from '../../core';
 import { Messages } from './messages/index';
@@ -197,7 +197,7 @@ export class Chat extends APIResource {
         try {
           const ret: StreamChatData = {
             event: message.event,
-            data: JSON.parse(message.data),
+            data: safeJsonParse(message.data),
           };
           yield ret;
         } catch (error) {
@@ -297,7 +297,7 @@ export class Chat extends APIResource {
           try {
             const ret: StreamChatData = {
               event: message.event,
-              data: JSON.parse(message.data),
+              data: safeJsonParse(message.data),
             };
             yield ret;
           } catch (error) {
