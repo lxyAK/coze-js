@@ -85,6 +85,3 @@ rush pub --only @scope/package-name --dry-run
 3. 预发布版本（alpha/beta）将跳过更新日志生成
 4. 在发布前会自动验证包的发布配置（shouldPublish）
 5. 该命令会修改文件并创建新分支，但 **您需要手动将分支推送到远程仓库，然后创建一个拉取请求**。
-
-
-您可以将上述内容直接复制并保存为 PUBLISH_GUIDE.md 或其他您喜欢的文件名。文件格式和内容完全保留了原始 Markdown 格式，包括代码块、列表和标题等结构。
