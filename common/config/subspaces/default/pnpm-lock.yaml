@@ -215,7 +215,7 @@ importers:
 
   ../../../examples/coze-js-node:
     dependencies:
-      '@coze/api':
+      '@lxyak/api':
         specifier: workspace:*
         version: link:../../packages/coze-js
       axios:
@@ -264,12 +264,12 @@ importers:
       '@babel/runtime':
         specifier: ^7.24.4
         version: 7.25.9
-      '@coze/api':
-        specifier: workspace:*
-        version: link:../../packages/coze-js
       '@coze/taro-api':
         specifier: workspace:*
         version: link:../../packages/coze-taro
+      '@lxyak/api':
+        specifier: workspace:*
+        version: link:../../packages/coze-js
       '@tarojs/components':
         specifier: 4.0.7
         version: 4.0.7(@tarojs/helper@4.0.7(@swc/helpers@0.5.15))(@types/react@18.3.12)(html-webpack-plugin@5.6.3(@rspack/core@1.1.1(@swc/helpers@0.5.15))(webpack@5.95.0(@swc/core@1.3.96(@swc/helpers@0.5.15))))(postcss@8.4.47)(react@18.3.1)(rollup@3.29.5)(vue@3.5.13(typescript@5.6.3))(webpack-chain@6.5.1)(webpack-dev-server@4.15.2(webpack@5.95.0(@swc/core@1.3.96(@swc/helpers@0.5.15))))(webpack@5.95.0(@swc/core@1.3.96(@swc/helpers@0.5.15)))
@@ -373,12 +373,12 @@ importers:
       '@babel/runtime':
         specifier: ^7.24.4
         version: 7.25.9
-      '@coze/api':
-        specifier: workspace:*
-        version: link:../../packages/coze-js
       '@coze/taro-api':
         specifier: workspace:*
         version: link:../../packages/coze-taro
+      '@lxyak/api':
+        specifier: workspace:*
+        version: link:../../packages/coze-js
       '@tarojs/components':
         specifier: 3.6.35
         version: 3.6.35(@tarojs/helper@3.6.35(@swc/helpers@0.5.15))(@tarojs/runtime@3.6.35(@tarojs/shared@3.6.35))(@tarojs/shared@3.6.35)(postcss@8.4.49)(react@18.3.1)(vue@3.5.13(typescript@5.6.3))
@@ -491,9 +491,6 @@ importers:
 
   ../../../examples/coze-js-uniapp:
     dependencies:
-      '@coze/api':
-        specifier: workspace:*
-        version: link:../../packages/coze-js
       '@coze/uniapp-api':
         specifier: workspace:*
         version: link:../../packages/coze-uniapp
@@ -542,6 +539,9 @@ importers:
       '@dcloudio/uni-quickapp-webview':
         specifier: 3.0.0-4030620241128001
         version: 3.0.0-4030620241128001(postcss@8.4.49)(rollup@4.24.4)(ts-node@10.9.2(@swc/core@1.7.39(@swc/helpers@0.5.15))(@types/node@20.16.15)(typescript@4.9.5))(vue@3.5.13(typescript@4.9.5))
+      '@lxyak/api':
+        specifier: workspace:*
+        version: link:../../packages/coze-js
       axios:
         specifier: ^1.7.7
         version: 1.9.0
@@ -606,7 +606,7 @@ importers:
       '@babel/core':
         specifier: ^7.16.0
         version: 7.25.9
-      '@coze/api':
+      '@lxyak/api':
         specifier: workspace:*
         version: link:../../packages/coze-js
       '@pmmmwh/react-refresh-webpack-plugin':
@@ -781,7 +781,7 @@ importers:
       '@ant-design/icons':
         specifier: ^5.5.1
         version: 5.5.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@coze/api':
+      '@lxyak/api':
         specifier: workspace:*
         version: link:../../packages/coze-js
       antd:
@@ -842,12 +842,12 @@ importers:
       '@babel/core':
         specifier: ^7.16.0
         version: 7.25.9
-      '@coze/api':
-        specifier: workspace:*
-        version: link:../../packages/coze-js
       '@coze/realtime-api':
         specifier: workspace:*
         version: link:../../packages/realtime-api
+      '@lxyak/api':
+        specifier: workspace:*
+        version: link:../../packages/coze-js
       '@pmmmwh/react-refresh-webpack-plugin':
         specifier: ^0.5.3
         version: 0.5.15(react-refresh@0.11.0)(type-fest@2.19.0)(webpack-dev-server@4.15.2(webpack@5.95.0(@swc/core@1.7.39(@swc/helpers@0.5.15))))(webpack@5.95.0(@swc/core@1.7.39(@swc/helpers@0.5.15)))
@@ -1017,12 +1017,12 @@ importers:
       '@babel/core':
         specifier: ^7.16.0
         version: 7.25.9
-      '@coze/api':
-        specifier: workspace:*
-        version: link:../../packages/coze-js
       '@coze/realtime-api':
         specifier: workspace:*
         version: link:../../packages/realtime-api
+      '@lxyak/api':
+        specifier: workspace:*
+        version: link:../../packages/coze-js
       '@pmmmwh/react-refresh-webpack-plugin':
         specifier: ^0.5.3
         version: 0.5.15(react-refresh@0.11.0)(type-fest@2.19.0)(webpack-dev-server@4.15.2(webpack@5.95.0(@swc/core@1.7.39(@swc/helpers@0.5.15))))(webpack@5.95.0(@swc/core@1.7.39(@swc/helpers@0.5.15)))
@@ -1210,12 +1210,12 @@ importers:
       '@babel/core':
         specifier: ^7.16.0
         version: 7.25.9
-      '@coze/api':
-        specifier: workspace:*
-        version: link:../../packages/coze-js
       '@coze/realtime-api':
         specifier: workspace:*
         version: link:../../packages/realtime-api
+      '@lxyak/api':
+        specifier: workspace:*
+        version: link:../../packages/coze-js
       '@pmmmwh/react-refresh-webpack-plugin':
         specifier: ^0.5.3
         version: 0.5.15(react-refresh@0.11.0)(type-fest@2.19.0)(webpack-dev-server@4.15.2(webpack@5.95.0(@swc/core@1.7.39(@swc/helpers@0.5.15))))(webpack@5.95.0(@swc/core@1.7.39(@swc/helpers@0.5.15)))
@@ -1385,12 +1385,12 @@ importers:
 
   ../../../examples/realtime-quickstart-vue:
     dependencies:
-      '@coze/api':
-        specifier: workspace:*
-        version: link:../../packages/coze-js
       '@coze/realtime-api':
         specifier: workspace:*
         version: link:../../packages/realtime-api
+      '@lxyak/api':
+        specifier: workspace:*
+        version: link:../../packages/coze-js
       '@volcengine/rtc':
         specifier: ~4.62.11
         version: 4.62.11
@@ -1461,7 +1461,7 @@ importers:
       '@ant-design/icons':
         specifier: ^5.5.1
         version: 5.5.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@coze/api':
+      '@lxyak/api':
         specifier: workspace:*
         version: link:../../packages/coze-js
       antd:
@@ -1519,7 +1519,7 @@ importers:
       '@ant-design/icons':
         specifier: ^5.5.1
         version: 5.5.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@coze/api':
+      '@lxyak/api':
         specifier: workspace:*
         version: link:../../packages/coze-js
       antd:
@@ -1858,9 +1858,9 @@ importers:
 
   ../../../packages/chat-sdk:
     dependencies:
-      '@coze/api':
-        specifier: ^1.0.17
-        version: 1.0.20(axios@1.7.7)
+      '@lxyak/api':
+        specifier: ^1.3.8
+        version: 1.3.8(axios@1.7.7)
       classnames:
         specifier: ^2.3.2
         version: 2.5.1
@@ -2169,7 +2169,7 @@ importers:
 
   ../../../packages/coze-taro:
     dependencies:
-      '@coze/api':
+      '@lxyak/api':
         specifier: workspace:*
         version: link:../coze-js
       '@tarojs/taro':
@@ -2203,12 +2203,12 @@ importers:
 
   ../../../packages/coze-uniapp:
     dependencies:
-      '@coze/api':
-        specifier: workspace:*
-        version: link:../coze-js
       '@dcloudio/uni-app':
         specifier: 3.0.0-4030620241128001
         version: 3.0.0-4030620241128001(@dcloudio/types@3.4.14)(postcss@8.4.49)(rollup@4.24.4)(ts-node@10.9.2(@swc/core@1.7.39(@swc/helpers@0.5.15))(@types/node@20.16.15)(typescript@4.9.5))(vue@3.5.13(typescript@4.9.5))
+      '@lxyak/api':
+        specifier: workspace:*
+        version: link:../coze-js
       axios:
         specifier: ^1.7.1
         version: 1.7.9
@@ -2240,7 +2240,7 @@ importers:
 
   ../../../packages/realtime-api:
     dependencies:
-      '@coze/api':
+      '@lxyak/api':
         specifier: workspace:*
         version: link:../coze-js
       '@volcengine/rtc':
@@ -3318,11 +3318,6 @@ packages:
   '@commitlint/types@17.8.1':
     resolution: {integrity: sha512-PXDQXkAmiMEG162Bqdh9ChML/GJZo6vU+7F03ALKDK8zYc6SuAr47LjG7hGYRqUOz+WK0dU7bQ0xzuqFMdxzeQ==}
     engines: {node: '>=v14'}
-
-  '@coze/api@1.0.20':
-    resolution: {integrity: sha512-cCx8mGJCcrjd66NgxK7iRE1akTs53i6J02TKT66C8F7LGsGYCDruJ7N0RQJ404JxIiXWTjROLygWKFV55lZrPg==}
-    peerDependencies:
-      axios: ^1.7.1
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -5016,6 +5011,11 @@ packages:
 
   '@leichtgewicht/ip-codec@2.0.5':
     resolution: {integrity: sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==}
+
+  '@lxyak/api@1.3.8':
+    resolution: {integrity: sha512-zgpipkknsFJqt4Tx8HO1HmHf477gvwSqez1Qncqc5nkEnekzryWb8RhE8re4c6dhz1SjGyfn5NeGMZLfQfuvAA==}
+    peerDependencies:
+      axios: ^1.7.1
 
   '@microsoft/tsdoc-config@0.16.2':
     resolution: {integrity: sha512-OGiIzzoBLgWWR0UdRJX98oYO+XKGf7tiK4Zk6tQ/E4IJqGCe7dvkTvgDZV5cFJUzLGDOjeAXrnZoA6QkVySuxw==}
@@ -18130,18 +18130,6 @@ snapshots:
     dependencies:
       chalk: 4.1.2
 
-  '@coze/api@1.0.20(axios@1.7.7)':
-    dependencies:
-      axios: 1.7.7(debug@4.3.7)
-      jsonwebtoken: 9.0.2
-      node-fetch: 2.7.0
-      reconnecting-websocket: 4.4.0
-      ws: 8.18.0
-    transitivePeerDependencies:
-      - bufferutil
-      - encoding
-      - utf-8-validate
-
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
@@ -20327,6 +20315,24 @@ snapshots:
       - utf-8-validate
 
   '@leichtgewicht/ip-codec@2.0.5': {}
+
+  '@lxyak/api@1.3.8(axios@1.7.7)':
+    dependencies:
+      agora-extension-ai-denoiser: 1.1.0(agora-rtc-sdk-ng@4.23.2-1)
+      agora-rtc-sdk-ng: 4.23.2-1
+      agora-rte-extension: 1.2.4
+      axios: 1.7.7(debug@4.3.7)
+      jsonwebtoken: 9.0.2
+      node-fetch: 2.7.0
+      opus-encdec: 0.1.1
+      reconnecting-websocket: 4.4.0
+      uuid: 10.0.0
+      ws: 8.18.0
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - encoding
+      - utf-8-validate
 
   '@microsoft/tsdoc-config@0.16.2':
     dependencies:
