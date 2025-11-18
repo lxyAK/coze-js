@@ -1,5 +1,5 @@
 {
-  "name": "@coze/chat-sdk",
+  "name": "@coze/chat-taro-sdk",
   "version": "0.1.11-beta.19",
   "description": "Coze chat components for taro",
   "license": "MIT",

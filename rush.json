@@ -433,7 +433,7 @@
       "shouldPublish": true
     },
     {
-      "packageName": "@coze/chat-sdk",
+      "packageName": "@coze/chat-taro-sdk",
       "projectFolder": "packages/chat-sdk",
       "shouldPublish": true,
       "decoupledLocalDependencies": ["@coze/api"]

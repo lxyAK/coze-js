@@ -1,4 +1,4 @@
-# @coze/chat-sdk
+# @coze/chat-taro-sdk
 
 ## 0.1.11 - 2025-03-21
 
@@ -6,7 +6,7 @@
 
 - add success toast in markdown code copy
 - change version
-- change version 
+- change version
 - 修改代码
 - fix webpakckjson conflict; markdown list is overflow
 - del mock data
@@ -17,10 +17,10 @@
 - 修改scrollview问题
 - 修改safari问题
 - change input to textarea
-- fix audio and textarea height 
+- fix audio and textarea height
 - 修改键盘弹起位置,以及placeholder
 - opt scroll-view
-- fix click change 
+- fix click change
 - fix mobile keyborad handle
 - 添加requireAction函数
 - 延迟发送消息
