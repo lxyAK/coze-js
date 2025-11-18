@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@lxyak/chat-taro-sdk",
+      "comment": "消息解析优化",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@lxyak/chat-taro-sdk",
+  "email": "lr17607146839@qq.com"
+}

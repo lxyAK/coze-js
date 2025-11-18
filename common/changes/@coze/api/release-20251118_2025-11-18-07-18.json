@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@coze/api",
+      "comment": "消息解析优化",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@coze/api",
+  "email": "lr17607146839@qq.com"
+}
