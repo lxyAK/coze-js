@@ -1859,8 +1859,8 @@ importers:
   ../../../packages/chat-sdk:
     dependencies:
       '@lxyak/api':
-        specifier: ^1.3.8
-        version: 1.3.8(axios@1.7.7)
+        specifier: ^1.3.9
+        version: 1.3.9(axios@1.7.7)
       classnames:
         specifier: ^2.3.2
         version: 2.5.1
@@ -5012,8 +5012,8 @@ packages:
   '@leichtgewicht/ip-codec@2.0.5':
     resolution: {integrity: sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==}
 
-  '@lxyak/api@1.3.8':
-    resolution: {integrity: sha512-zgpipkknsFJqt4Tx8HO1HmHf477gvwSqez1Qncqc5nkEnekzryWb8RhE8re4c6dhz1SjGyfn5NeGMZLfQfuvAA==}
+  '@lxyak/api@1.3.9':
+    resolution: {integrity: sha512-nqC05lhaFtDfmcs6EN9e1eE5xBOIRBlWg/0GaKS7cXh3C01wrV/5XYQiKUKgAFVCA7mrt5xJCFM5phF02j8yVw==}
     peerDependencies:
       axios: ^1.7.1
 
@@ -20316,7 +20316,7 @@ snapshots:
 
   '@leichtgewicht/ip-codec@2.0.5': {}
 
-  '@lxyak/api@1.3.8(axios@1.7.7)':
+  '@lxyak/api@1.3.9(axios@1.7.7)':
     dependencies:
       agora-extension-ai-denoiser: 1.1.0(agora-rtc-sdk-ng@4.23.2-1)
       agora-rtc-sdk-ng: 4.23.2-1
