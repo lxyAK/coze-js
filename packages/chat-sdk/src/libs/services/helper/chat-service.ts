@@ -7,7 +7,7 @@ import type {
   StreamChatData,
   APIError,
   CozeAPI,
-} from '@lxyak/api';
+} from '@coze/api';
 
 import { logger, MiniChatError, MiniCozeApi } from '@/libs/utils';
 import { SuggestPromoteInfo } from '@/libs/types/base/chat';

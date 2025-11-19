@@ -1,4 +1,4 @@
-import { ContentType } from '@lxyak/api';
+import { ContentType } from '@coze/api';
 
 import { MessageUiConfigMap, type ChatMessage } from '@/libs/types';
 

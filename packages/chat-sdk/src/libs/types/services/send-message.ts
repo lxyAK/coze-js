@@ -1,4 +1,4 @@
-import { CreateChatData, type EnterMessage } from '@lxyak/api';
+import { CreateChatData, type EnterMessage } from '@coze/api';
 
 import { MiniChatError } from '@/libs/utils';
 import {

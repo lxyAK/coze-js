@@ -3,7 +3,7 @@ import {
   ChatEventType,
   type StreamChatData,
   CreateChatData,
-} from '@lxyak/api';
+} from '@coze/api';
 
 import { logger, MiniChatError, safeJSONParse } from '@/libs/utils';
 import { ChatMessage, Language } from '@/libs/types';
@@ -183,9 +183,9 @@ export class AsyncSendMessage extends MultiSendMessage {
         }
       }
     } catch (error) {
-      // ! 错误消息在coze
+      // ! 错误消息在@coze/api json解析问题
       logger.error('asyncChat pollAnswer error', error);
-      this.sendErrorEvent(new MiniChatError(-1, this.i18n.t('sendFailed')));
+      // this.sendErrorEvent(new MiniChatError(-1, this.i18n.t('sendFailed')));
       return;
     }
   }
