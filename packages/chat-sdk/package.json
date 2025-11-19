@@ -70,7 +70,7 @@
     "ios >= 8"
   ],
   "dependencies": {
-    "@coze/api": "^1.0.17",
+    "@coze/api": "1.0.20",
     "classnames": "^2.3.2",
     "mdast": "^3.0.0-alpha.6",
     "mdast-util-from-markdown": "^2.0.0",
