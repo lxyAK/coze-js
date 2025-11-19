@@ -1858,9 +1858,9 @@ importers:
 
   ../../../packages/chat-sdk:
     dependencies:
-      '@lxyak/api':
-        specifier: 1.0.21
-        version: 1.0.21(axios@1.7.7)
+      '@coze/api':
+        specifier: ^1.3.2
+        version: 1.3.8(axios@1.7.7)
       classnames:
         specifier: ^2.3.2
         version: 2.5.1
@@ -2205,7 +2205,7 @@ importers:
     dependencies:
       '@dcloudio/uni-app':
         specifier: 3.0.0-4030620241128001
-        version: 3.0.0-4030620241128001(@dcloudio/types@3.4.14)
+        version: 3.0.0-4030620241128001(@dcloudio/types@3.4.14)(postcss@8.4.49)(rollup@4.24.4)(ts-node@10.9.2(@swc/core@1.7.39(@swc/helpers@0.5.15))(@types/node@20.16.15)(typescript@4.9.5))(vue@3.5.13(typescript@4.9.5))
       '@lxyak/api':
         specifier: workspace:*
         version: link:../coze-js
@@ -3318,6 +3318,11 @@ packages:
   '@commitlint/types@17.8.1':
     resolution: {integrity: sha512-PXDQXkAmiMEG162Bqdh9ChML/GJZo6vU+7F03ALKDK8zYc6SuAr47LjG7hGYRqUOz+WK0dU7bQ0xzuqFMdxzeQ==}
     engines: {node: '>=v14'}
+
+  '@coze/api@1.3.8':
+    resolution: {integrity: sha512-y1tHZMLZIUrbd1XrOIuffC771QiN0OMNz2K7lLvVHB/ev3ViXH9dGkD5xHXc2uNWTnU4O3GJS6vBSrMAY1QlrQ==}
+    peerDependencies:
+      axios: ^1.7.1
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -5011,11 +5016,6 @@ packages:
 
   '@leichtgewicht/ip-codec@2.0.5':
     resolution: {integrity: sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==}
-
-  '@lxyak/api@1.0.21':
-    resolution: {integrity: sha512-cpQwB6YpbNXrm+uw1T15wX/o03Ld4AjRSHmWC5tbUmAjY5z2WGOQ0ofahCXKIQ3S03bYAVG7fEBrch41Ny7Ibg==}
-    peerDependencies:
-      axios: ^1.7.1
 
   '@microsoft/tsdoc-config@0.16.2':
     resolution: {integrity: sha512-OGiIzzoBLgWWR0UdRJX98oYO+XKGf7tiK4Zk6tQ/E4IJqGCe7dvkTvgDZV5cFJUzLGDOjeAXrnZoA6QkVySuxw==}
@@ -18130,6 +18130,24 @@ snapshots:
     dependencies:
       chalk: 4.1.2
 
+  '@coze/api@1.3.8(axios@1.7.7)':
+    dependencies:
+      agora-extension-ai-denoiser: 1.1.0(agora-rtc-sdk-ng@4.23.2-1)
+      agora-rtc-sdk-ng: 4.23.2-1
+      agora-rte-extension: 1.2.4
+      axios: 1.7.7(debug@4.3.7)
+      jsonwebtoken: 9.0.2
+      node-fetch: 2.7.0
+      opus-encdec: 0.1.1
+      reconnecting-websocket: 4.4.0
+      uuid: 10.0.0
+      ws: 8.18.0
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - encoding
+      - utf-8-validate
+
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
@@ -18430,25 +18448,6 @@ snapshots:
 
   '@dcloudio/uni-app-vue@3.0.0-4030620241128001': {}
 
-  '@dcloudio/uni-app@3.0.0-4030620241128001(@dcloudio/types@3.4.14)':
-    dependencies:
-      '@dcloudio/types': 3.4.14
-      '@dcloudio/uni-cloud': 3.0.0-4030620241128001
-      '@dcloudio/uni-components': 3.0.0-4030620241128001
-      '@dcloudio/uni-i18n': 3.0.0-4030620241128001
-      '@dcloudio/uni-push': 3.0.0-4030620241128001
-      '@dcloudio/uni-shared': 3.0.0-4030620241128001
-      '@dcloudio/uni-stat': 3.0.0-4030620241128001
-      '@vue/shared': 3.4.21
-    transitivePeerDependencies:
-      - '@nuxt/kit'
-      - '@vueuse/core'
-      - postcss
-      - rollup
-      - supports-color
-      - ts-node
-      - vue
-
   '@dcloudio/uni-app@3.0.0-4030620241128001(@dcloudio/types@3.4.14)(postcss@8.4.49)(rollup@4.24.4)(ts-node@10.9.2(@swc/core@1.7.39(@swc/helpers@0.5.15))(@types/node@20.16.15)(typescript@4.9.5))(vue@3.5.13(typescript@4.9.5))':
     dependencies:
       '@dcloudio/types': 3.4.14
@@ -18493,64 +18492,6 @@ snapshots:
       - supports-color
       - ts-node
       - utf-8-validate
-      - vue
-
-  '@dcloudio/uni-cli-shared@3.0.0-4030620241128001':
-    dependencies:
-      '@ampproject/remapping': 2.3.0
-      '@babel/code-frame': 7.25.9
-      '@babel/core': 7.25.9
-      '@babel/parser': 7.25.9
-      '@babel/types': 7.25.9
-      '@dcloudio/uni-i18n': 3.0.0-4030620241128001
-      '@dcloudio/uni-shared': 3.0.0-4030620241128001
-      '@intlify/core-base': 9.1.9
-      '@intlify/shared': 9.1.9
-      '@intlify/vue-devtools': 9.1.9
-      '@rollup/pluginutils': 5.1.3(rollup@3.29.5)
-      '@vue/compiler-core': 3.4.21
-      '@vue/compiler-dom': 3.4.21
-      '@vue/compiler-sfc': 3.4.21
-      '@vue/compiler-ssr': 3.4.21
-      '@vue/server-renderer': 3.4.21(vue@3.5.13(typescript@4.9.5))
-      '@vue/shared': 3.4.21
-      adm-zip: 0.5.16
-      autoprefixer: 10.4.20(postcss@8.4.47)
-      base64url: 3.0.1
-      chokidar: 3.6.0
-      compare-versions: 3.6.0
-      debug: 4.3.7
-      es-module-lexer: 1.5.4
-      esbuild: 0.20.2
-      estree-walker: 2.0.2
-      fast-glob: 3.3.3
-      fs-extra: 10.1.0
-      hash-sum: 2.0.0
-      isbinaryfile: 5.0.4
-      jsonc-parser: 3.3.1
-      lines-and-columns: 2.0.4
-      magic-string: 0.30.12
-      merge: 2.1.1
-      mime: 3.0.0
-      module-alias: 2.2.3
-      os-locale-s-fix: 1.0.8-fix-1
-      picocolors: 1.1.1
-      postcss-import: 14.1.0(postcss@8.4.49)
-      postcss-load-config: 3.1.4(postcss@8.4.49)(ts-node@10.9.2(@swc/core@1.7.39(@swc/helpers@0.5.15))(@types/node@20.16.15)(typescript@4.9.5))
-      postcss-modules: 4.3.1
-      postcss-selector-parser: 6.1.2
-      resolve: 1.22.8
-      source-map-js: 1.2.1
-      tapable: 2.2.1
-      unplugin-auto-import: 0.18.6
-      xregexp: 3.1.0
-    transitivePeerDependencies:
-      - '@nuxt/kit'
-      - '@vueuse/core'
-      - postcss
-      - rollup
-      - supports-color
-      - ts-node
       - vue
 
   '@dcloudio/uni-cli-shared@3.0.0-4030620241128001(postcss@8.4.49)(rollup@4.24.4)(ts-node@10.9.2(@swc/core@1.7.39(@swc/helpers@0.5.15))(@types/node@20.16.15)(typescript@4.9.5))(vue@3.5.13(typescript@4.9.5))':
@@ -18611,22 +18552,6 @@ snapshots:
       - ts-node
       - vue
 
-  '@dcloudio/uni-cloud@3.0.0-4030620241128001':
-    dependencies:
-      '@dcloudio/uni-cli-shared': 3.0.0-4030620241128001
-      '@dcloudio/uni-i18n': 3.0.0-4030620241128001
-      '@dcloudio/uni-shared': 3.0.0-4030620241128001
-      '@vue/shared': 3.4.21
-      fast-glob: 3.3.3
-    transitivePeerDependencies:
-      - '@nuxt/kit'
-      - '@vueuse/core'
-      - postcss
-      - rollup
-      - supports-color
-      - ts-node
-      - vue
-
   '@dcloudio/uni-cloud@3.0.0-4030620241128001(postcss@8.4.49)(rollup@4.24.4)(ts-node@10.9.2(@swc/core@1.7.39(@swc/helpers@0.5.15))(@types/node@20.16.15)(typescript@4.9.5))(vue@3.5.13(typescript@4.9.5))':
     dependencies:
       '@dcloudio/uni-cli-shared': 3.0.0-4030620241128001(postcss@8.4.49)(rollup@4.24.4)(ts-node@10.9.2(@swc/core@1.7.39(@swc/helpers@0.5.15))(@types/node@20.16.15)(typescript@4.9.5))(vue@3.5.13(typescript@4.9.5))
@@ -18643,47 +18568,11 @@ snapshots:
       - ts-node
       - vue
 
-  '@dcloudio/uni-components@3.0.0-4030620241128001':
-    dependencies:
-      '@dcloudio/uni-cloud': 3.0.0-4030620241128001
-      '@dcloudio/uni-h5': 3.0.0-4030620241128001
-      '@dcloudio/uni-i18n': 3.0.0-4030620241128001
-    transitivePeerDependencies:
-      - '@nuxt/kit'
-      - '@vueuse/core'
-      - postcss
-      - rollup
-      - supports-color
-      - ts-node
-      - vue
-
   '@dcloudio/uni-components@3.0.0-4030620241128001(postcss@8.4.49)(rollup@4.24.4)(ts-node@10.9.2(@swc/core@1.7.39(@swc/helpers@0.5.15))(@types/node@20.16.15)(typescript@4.9.5))(vue@3.5.13(typescript@4.9.5))':
     dependencies:
       '@dcloudio/uni-cloud': 3.0.0-4030620241128001(postcss@8.4.49)(rollup@4.24.4)(ts-node@10.9.2(@swc/core@1.7.39(@swc/helpers@0.5.15))(@types/node@20.16.15)(typescript@4.9.5))(vue@3.5.13(typescript@4.9.5))
       '@dcloudio/uni-h5': 3.0.0-4030620241128001(postcss@8.4.49)(rollup@4.24.4)(ts-node@10.9.2(@swc/core@1.7.39(@swc/helpers@0.5.15))(@types/node@20.16.15)(typescript@4.9.5))(vue@3.5.13(typescript@4.9.5))
       '@dcloudio/uni-i18n': 3.0.0-4030620241128001
-    transitivePeerDependencies:
-      - '@nuxt/kit'
-      - '@vueuse/core'
-      - postcss
-      - rollup
-      - supports-color
-      - ts-node
-      - vue
-
-  '@dcloudio/uni-h5-vite@3.0.0-4030620241128001':
-    dependencies:
-      '@dcloudio/uni-cli-shared': 3.0.0-4030620241128001
-      '@dcloudio/uni-shared': 3.0.0-4030620241128001
-      '@rollup/pluginutils': 5.1.3(rollup@3.29.5)
-      '@vue/compiler-dom': 3.4.21
-      '@vue/compiler-sfc': 3.4.21
-      '@vue/server-renderer': 3.4.21(vue@3.5.13(typescript@4.9.5))
-      '@vue/shared': 3.4.21
-      debug: 4.3.7
-      fs-extra: 10.1.0
-      mime: 3.0.0
-      module-alias: 2.2.3
     transitivePeerDependencies:
       - '@nuxt/kit'
       - '@vueuse/core'
@@ -18720,29 +18609,6 @@ snapshots:
       '@dcloudio/uni-shared': 3.0.0-4030620241128001
       '@vue/server-renderer': 3.4.21(vue@3.5.13(typescript@4.9.5))
     transitivePeerDependencies:
-      - vue
-
-  '@dcloudio/uni-h5@3.0.0-4030620241128001':
-    dependencies:
-      '@dcloudio/uni-h5-vite': 3.0.0-4030620241128001
-      '@dcloudio/uni-h5-vue': 3.0.0-4030620241128001(vue@3.5.13(typescript@4.9.5))
-      '@dcloudio/uni-i18n': 3.0.0-4030620241128001
-      '@dcloudio/uni-shared': 3.0.0-4030620241128001
-      '@vue/server-renderer': 3.4.21(vue@3.5.13(typescript@4.9.5))
-      '@vue/shared': 3.4.21
-      debug: 4.3.7
-      localstorage-polyfill: 1.0.1
-      postcss-selector-parser: 6.1.2
-      safe-area-insets: 1.4.1
-      vue-router: 4.5.0(vue@3.5.13(typescript@4.9.5))
-      xmlhttprequest: 1.8.0
-    transitivePeerDependencies:
-      - '@nuxt/kit'
-      - '@vueuse/core'
-      - postcss
-      - rollup
-      - supports-color
-      - ts-node
       - vue
 
   '@dcloudio/uni-h5@3.0.0-4030620241128001(postcss@8.4.49)(rollup@4.24.4)(ts-node@10.9.2(@swc/core@1.7.39(@swc/helpers@0.5.15))(@types/node@20.16.15)(typescript@4.9.5))(vue@3.5.13(typescript@4.9.5))':
@@ -18998,18 +18864,6 @@ snapshots:
       parse-css-font: 4.0.0
       postcss: 8.4.49
 
-  '@dcloudio/uni-push@3.0.0-4030620241128001':
-    dependencies:
-      '@dcloudio/uni-cli-shared': 3.0.0-4030620241128001
-    transitivePeerDependencies:
-      - '@nuxt/kit'
-      - '@vueuse/core'
-      - postcss
-      - rollup
-      - supports-color
-      - ts-node
-      - vue
-
   '@dcloudio/uni-push@3.0.0-4030620241128001(postcss@8.4.49)(rollup@4.24.4)(ts-node@10.9.2(@swc/core@1.7.39(@swc/helpers@0.5.15))(@types/node@20.16.15)(typescript@4.9.5))(vue@3.5.13(typescript@4.9.5))':
     dependencies:
       '@dcloudio/uni-cli-shared': 3.0.0-4030620241128001(postcss@8.4.49)(rollup@4.24.4)(ts-node@10.9.2(@swc/core@1.7.39(@swc/helpers@0.5.15))(@types/node@20.16.15)(typescript@4.9.5))(vue@3.5.13(typescript@4.9.5))
@@ -19043,20 +18897,6 @@ snapshots:
       '@vue/shared': 3.4.21
 
   '@dcloudio/uni-stacktracey@3.0.0-4030620241128001': {}
-
-  '@dcloudio/uni-stat@3.0.0-4030620241128001':
-    dependencies:
-      '@dcloudio/uni-cli-shared': 3.0.0-4030620241128001
-      '@dcloudio/uni-shared': 3.0.0-4030620241128001
-      debug: 4.3.7
-    transitivePeerDependencies:
-      - '@nuxt/kit'
-      - '@vueuse/core'
-      - postcss
-      - rollup
-      - supports-color
-      - ts-node
-      - vue
 
   '@dcloudio/uni-stat@3.0.0-4030620241128001(postcss@8.4.49)(rollup@4.24.4)(ts-node@10.9.2(@swc/core@1.7.39(@swc/helpers@0.5.15))(@types/node@20.16.15)(typescript@4.9.5))(vue@3.5.13(typescript@4.9.5))':
     dependencies:
@@ -20493,18 +20333,6 @@ snapshots:
       - utf-8-validate
 
   '@leichtgewicht/ip-codec@2.0.5': {}
-
-  '@lxyak/api@1.0.21(axios@1.7.7)':
-    dependencies:
-      axios: 1.7.7(debug@4.3.7)
-      jsonwebtoken: 9.0.2
-      node-fetch: 2.7.0
-      reconnecting-websocket: 4.4.0
-      ws: 8.18.0
-    transitivePeerDependencies:
-      - bufferutil
-      - encoding
-      - utf-8-validate
 
   '@microsoft/tsdoc-config@0.16.2':
     dependencies:
@@ -31822,17 +31650,6 @@ snapshots:
       icss-utils: 5.1.0(postcss@8.4.49)
       postcss: 8.4.49
 
-  postcss-modules@4.3.1:
-    dependencies:
-      generic-names: 4.0.0
-      icss-replace-symbols: 1.1.0
-      lodash.camelcase: 4.3.0
-      postcss-modules-extract-imports: 3.1.0(postcss@8.4.47)
-      postcss-modules-local-by-default: 4.0.5(postcss@8.4.47)
-      postcss-modules-scope: 3.2.0(postcss@8.4.47)
-      postcss-modules-values: 4.0.0(postcss@8.4.47)
-      string-hash: 1.1.3
-
   postcss-modules@4.3.1(postcss@8.4.49):
     dependencies:
       generic-names: 4.0.0
@@ -34766,19 +34583,6 @@ snapshots:
   universalify@2.0.1: {}
 
   unpipe@1.0.0: {}
-
-  unplugin-auto-import@0.18.6:
-    dependencies:
-      '@antfu/utils': 0.7.10
-      '@rollup/pluginutils': 5.1.3(rollup@3.29.5)
-      fast-glob: 3.3.3
-      local-pkg: 0.5.1
-      magic-string: 0.30.17
-      minimatch: 9.0.5
-      unimport: 3.14.6(rollup@4.24.4)
-      unplugin: 1.16.1
-    transitivePeerDependencies:
-      - rollup
 
   unplugin-auto-import@0.18.6(rollup@4.24.4):
     dependencies:
