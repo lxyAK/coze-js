@@ -70,7 +70,7 @@
     "ios >= 8"
   ],
   "dependencies": {
-    "@lxyak/api": "1.0.20",
+    "@lxyak/api": "1.0.21",
     "classnames": "^2.3.2",
     "mdast": "^3.0.0-alpha.6",
     "mdast-util-from-markdown": "^2.0.0",
