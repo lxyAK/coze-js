@@ -3,7 +3,7 @@ import {
   ChatEventType,
   type StreamChatData,
   CreateChatData,
-} from '@lxyak/api';
+} from '@coze/api';
 
 import { logger, MiniChatError, safeJSONParse } from '@/libs/utils';
 import { ChatMessage, Language } from '@/libs/types';

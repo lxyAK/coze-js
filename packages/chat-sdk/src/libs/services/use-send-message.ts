@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 
-import { type EnterMessage } from '@lxyak/api';
+import { type EnterMessage } from '@coze/api';
 
 import { showToast } from '@/libs/utils';
 import { useApiClientStore, useUserInfoStore } from '@/libs/provider';
@@ -58,7 +58,6 @@ export const useSendMessage = () => {
   );
   const sendMessage = usePersistCallback(
     async (rawMessage: RawMessage, historyMessages?: EnterMessage[]) => {
-      
       const { clearMessage: disableState } = getOpDisabledState();
       if (disableState) {
         return;
@@ -72,7 +71,7 @@ export const useSendMessage = () => {
         }
       }
       if (rawMessage.type === RawMessageType.FILE) {
-         const sendMessageHandler = getSendMessageHandler({
+        const sendMessageHandler = getSendMessageHandler({
           botId,
           chatService,
           conversationId,
@@ -133,7 +132,7 @@ export const useSendMessage = () => {
   const sendTextMessage = useCallback(
     async (content: string) =>
       await sendMessage({
-        type: RawMessageType.TEXT_AND_FILE ,
+        type: RawMessageType.TEXT_AND_FILE,
         data: content,
       }),
     [sendMessage],

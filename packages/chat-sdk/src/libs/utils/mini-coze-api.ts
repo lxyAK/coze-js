@@ -10,7 +10,7 @@ import {
   type ClientOptions,
   type CreateFileReq,
   type FileObject,
-} from '@lxyak/api';
+} from '@coze/api';
 
 import { safeJSONParse } from './safe-json-parse';
 import { convertToMinChatError, MiniChatError } from './mini-chat-error';

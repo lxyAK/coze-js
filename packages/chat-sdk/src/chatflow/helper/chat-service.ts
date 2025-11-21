@@ -4,7 +4,7 @@ import {
   StreamChatData,
   type ChatWorkflowReq,
   CreateConversationReq,
-} from '@lxyak/api';
+} from '@coze/api';
 
 import {
   getCdnUrl,

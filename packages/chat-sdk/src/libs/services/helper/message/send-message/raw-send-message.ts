@@ -4,7 +4,7 @@ import {
   RoleType,
   type ContentType,
   CreateChatData,
-} from '@lxyak/api';
+} from '@coze/api';
 
 import { MiniChatError, logger, nanoid } from '@/libs/utils';
 import {
