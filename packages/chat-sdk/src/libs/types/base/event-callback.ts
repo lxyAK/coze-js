@@ -1,5 +1,5 @@
 import { ITouchEvent } from '@tarojs/components';
-import { CreateChatData } from '@coze/api';
+import { CreateChatData } from '@lxyak/api';
 
 import { ChatMessageGroup } from './message';
 

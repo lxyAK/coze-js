@@ -144,8 +144,6 @@ async function getInitConversationDetail(chatService: IChatService) {
       id: conversationId,
       sectionId,
       ...messageListRes,
-      cachedFiles: [],
-      cachedLocalFiles: []
     };
   } catch (err) {
     throw new MiniChatError(

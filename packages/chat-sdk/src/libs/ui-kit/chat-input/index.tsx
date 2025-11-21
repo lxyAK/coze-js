@@ -47,7 +47,7 @@ export const ChatInput = forwardRef(
     } = props;
     
     const fileCacheStore = useFileCacheStore(store => store);
-    const { cachedFiles: uploadedFiles, removeFile } = fileCacheStore; // 保持变量名向后兼容
+    const { uploadedFiles, removeFile } = fileCacheStore;
     
     const handleAddFiles = (files: ChooseFileInfo[]) => {
       // 关键点：只调用onSendFileMessage，不再直接处理本地文件缓存

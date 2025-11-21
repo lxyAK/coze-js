@@ -1,16 +1,18 @@
 import { FC, useMemo } from 'react';
+import cls from 'classnames';
 import { View, Image } from '@tarojs/components';
 import { SvgClose } from '@/libs/ui-kit/atomic/svg';
+import { getFileTypeByFile, isImageFile } from '@/libs/utils';
 import { ChooseFileInfo, ObjectStringItemMix, FileTypeEnum } from '@/libs/types';
 
-// // 文件大小格式化函数
-// function getFileSizeStr(bytes: number): string {
-//   if (bytes === 0) return '0 B';
-//   const k = 1024;
-//   const sizes = ['B', 'KB', 'MB', 'GB'];
-//   const i = Math.floor(Math.log(bytes) / Math.log(k));
-//   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-// }
+// 文件大小格式化函数
+function getFileSizeStr(bytes: number): string {
+  if (bytes === 0) return '0 B';
+  const k = 1024;
+  const sizes = ['B', 'KB', 'MB', 'GB'];
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+}
 import { IconButton } from '@/libs/ui-kit/atomic/icon-button';
 
 // @ts-ignore - 忽略less模块导入类型错误
@@ -25,17 +27,17 @@ const AttachmentItem: FC<AttachmentItemProps> = ({ file, onRemove }) => {
   // 改进类型安全的属性获取
   const fileId = 'file_id' in file ? file.file_id : (file as ChooseFileInfo).tempFilePath;
   
-  // // 更健壮的文件名获取逻辑，避免显示"未知文件"
-  // const fileName = 'name' in file ? file.name : 
-  //                 'file' in file && file.file && 'name' in file.file ? file.file.name : 
-  //                 'fileName' in file ? file.fileName : 
-  //                 // 尝试从路径或URL中提取文件名
-  //                 (fileId && typeof fileId === 'string' && fileId.lastIndexOf('/') > -1 
-  //                   ? fileId.substring(fileId.lastIndexOf('/') + 1) 
-  //                   : '文件');
+  // 更健壮的文件名获取逻辑，避免显示"未知文件"
+  const fileName = 'name' in file ? file.name : 
+                  'file' in file && file.file && 'name' in file.file ? file.file.name : 
+                  'fileName' in file ? file.fileName : 
+                  // 尝试从路径或URL中提取文件名
+                  (fileId && typeof fileId === 'string' && fileId.lastIndexOf('/') > -1 
+                    ? fileId.substring(fileId.lastIndexOf('/') + 1) 
+                    : '文件');
   
-  // const fileSize = 'size' in file ? file.size : 
-  //                 'file' in file && file.file && 'size' in file.file ? file.file.size : 0;
+  const fileSize = 'size' in file ? file.size : 
+                  'file' in file && file.file && 'size' in file.file ? file.file.size : 0;
   
   const fileUrl = 'file_url' in file ? file.file_url : 
                  'tempFilePath' in file ? file.tempFilePath : 
@@ -66,7 +68,8 @@ const AttachmentItem: FC<AttachmentItemProps> = ({ file, onRemove }) => {
       <IconButton
         className={styles['delete-btn']}
         hoverTheme="none"
-        onClick={() => {
+        onClick={(e) => {
+          e?.stopPropagation?.();
           if (fileId) {
             onRemove(fileId);
           }

@@ -20,6 +20,7 @@ export const useTextInputHandle = (
     defaultValue,
     onSendTextMessage: onSendTextMessageOnly,
     disabled,
+    files,
   } = chatInputProps;
   const { inputId, taskMessage, selectedFiles } = options;
   const [focused, setFocused] = useState(false);

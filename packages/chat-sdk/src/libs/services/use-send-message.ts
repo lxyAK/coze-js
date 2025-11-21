@@ -1,6 +1,6 @@
 import { useCallback } from 'react';
 
-import { type EnterMessage } from '@coze/api';
+import { type EnterMessage } from '@lxyak/api';
 
 import { showToast } from '@/libs/utils';
 import { useApiClientStore, useUserInfoStore } from '@/libs/provider';
@@ -14,6 +14,7 @@ import {
   useUiEventStore,
   useChatInputStore,
   useChatPropsStore,
+  useFileCacheStore,
 } from '../provider/context/chat-store-context';
 import {
   getSendMessageHandler,
@@ -21,7 +22,6 @@ import {
   RawMessageType,
 } from './helper/message';
 import { usePersistCallback } from '../hooks';
-import { useCreateFileCacheStore } from '@/libs/provider/store/file-cache';
 // eslint-disable-next-line max-lines-per-function
 export const useSendMessage = () => {
   const {
@@ -35,7 +35,7 @@ export const useSendMessage = () => {
     sectionId: store.sectionId,
     popLastErrorChatGroup: store.popLastErrorChatGroup,
   }));
-  const fileCacheStore = useCreateFileCacheStore();
+  const fileCacheStore = useFileCacheStore(store => store);
   const i18n = useI18n();
   const userInfo = useUserInfoStore(store => store.info);
   const botId = useChatInfoStore(store => store.id);
@@ -58,6 +58,7 @@ export const useSendMessage = () => {
   );
   const sendMessage = usePersistCallback(
     async (rawMessage: RawMessage, historyMessages?: EnterMessage[]) => {
+      
       const { clearMessage: disableState } = getOpDisabledState();
       if (disableState) {
         return;
@@ -71,7 +72,7 @@ export const useSendMessage = () => {
         }
       }
       if (rawMessage.type === RawMessageType.FILE) {
-        const sendMessageHandler = getSendMessageHandler({
+         const sendMessageHandler = getSendMessageHandler({
           botId,
           chatService,
           conversationId,
@@ -132,7 +133,7 @@ export const useSendMessage = () => {
   const sendTextMessage = useCallback(
     async (content: string) =>
       await sendMessage({
-        type: RawMessageType.TEXT_AND_FILE,
+        type: RawMessageType.TEXT_AND_FILE ,
         data: content,
       }),
     [sendMessage],
@@ -148,7 +149,7 @@ export const useSendMessage = () => {
       //   type: RawMessageType.TEXT,
       //   data: '帮我分析这个图片的内容',
       // });
-      return await sendMessage({
+      await sendMessage({
         type: RawMessageType.FILE,
         data: files,
       });

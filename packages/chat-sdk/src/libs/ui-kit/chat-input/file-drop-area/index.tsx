@@ -1,4 +1,5 @@
 import { FC, useState, useEffect } from 'react';
+import cls from 'classnames';
 import { View } from '@tarojs/components';
 import { isWeb, getFileTypeByFile, logger } from '@/libs/utils';
 import { ChooseFileInfo } from '@/libs/types';

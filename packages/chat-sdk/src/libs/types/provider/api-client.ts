@@ -1,4 +1,4 @@
-import { CozeAPI } from '@coze/api';
+import { CozeAPI } from '@lxyak/api';
 
 import { AuthConf, SettingInfo, ChatInfo } from '@/libs/types/base';
 

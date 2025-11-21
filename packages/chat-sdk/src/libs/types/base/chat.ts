@@ -1,4 +1,4 @@
-import { BotInfo } from '@coze/api';
+import { BotInfo } from '@lxyak/api';
 
 import type { BgImageInfoMap } from './ui';
 export enum ChatType {

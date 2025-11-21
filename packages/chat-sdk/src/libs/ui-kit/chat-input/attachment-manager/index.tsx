@@ -18,7 +18,7 @@ export const AttachmentManager: FC<AttachmentManagerProps> = ({
   onRemoveFile,
   disabled = false,
 }) => {
-  const handlePaste = (e: ClipboardEvent) => {
+  const handlePaste = (e: ClipboardEvent<Document>) => {
     if (disabled) return;
     
     // 检查剪贴板中是否有文件

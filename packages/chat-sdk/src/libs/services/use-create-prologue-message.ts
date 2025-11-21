@@ -1,6 +1,6 @@
 import { useCallback, useMemo } from 'react';
 
-import { RoleType } from '@coze/api';
+import { RoleType } from '@lxyak/api';
 
 import { ChatMessage, ChatMessageGroup } from '@/libs/types';
 import {
