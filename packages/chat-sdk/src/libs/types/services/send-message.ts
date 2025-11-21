@@ -17,6 +17,7 @@ export enum RawMessageType {
   TEXT = 'text',
   FILE = 'file',
   AUDIO = 'audio',
+  TEXT_AND_FILE = 'text_and_file',
 }
 export type RawMessage =
   | {
@@ -30,6 +31,10 @@ export type RawMessage =
   | {
       type: RawMessageType.AUDIO;
       data: AudioRaw;
+    }
+  | {
+      type: RawMessageType.TEXT_AND_FILE;
+      data: string;
     };
 
 export interface SendMessageEventData {

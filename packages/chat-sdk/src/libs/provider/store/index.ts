@@ -21,3 +21,8 @@ export {
   useCreateChatInputStore,
   type CreateChatInputStore,
 } from './chat-input';
+
+export {
+  useCreateFileCacheStore,
+  type CreateFileCacheStore,
+} from './file-cache';

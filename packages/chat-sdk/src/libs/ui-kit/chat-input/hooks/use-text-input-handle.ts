@@ -5,12 +5,14 @@ import { useI18n } from '@/libs/provider';
 import { usePersistCallback, useUpdateEffect } from '@/libs/hooks';
 
 import { IChatInputProps, ITaskMessage } from '../type';
+import { type ChooseFileInfo } from '@/libs/types';
 
 export const useTextInputHandle = (
   chatInputProps: IChatInputProps,
   options: {
     inputId: string;
     taskMessage?: ITaskMessage;
+    selectedFiles?: ChooseFileInfo[];
   },
 ) => {
   const i18n = useI18n();
@@ -19,7 +21,7 @@ export const useTextInputHandle = (
     onSendTextMessage: onSendTextMessageOnly,
     disabled,
   } = chatInputProps;
-  const { inputId, taskMessage } = options;
+  const { inputId, taskMessage, selectedFiles } = options;
   const [focused, setFocused] = useState(false);
   const [inputValue, setInputValue] = useState(defaultValue);
   const toSendInputValue = useMemo(() => {
@@ -63,6 +65,7 @@ export const useTextInputHandle = (
       inputValue,
       toSendInputValue,
       disabled,
+      selectedFiles,
     });
 
     if (toSendInputValue && !disabled) {

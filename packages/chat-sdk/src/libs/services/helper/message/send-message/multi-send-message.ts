@@ -1,4 +1,4 @@
-import { type EnterMessage, RoleType, type ObjectStringItem } from '@coze/api';
+import { type EnterMessage, RoleType } from '@coze/api';
 
 import {
   convertToMinChatError,
@@ -14,7 +14,7 @@ import {
   type AudioRaw,
 } from '@/libs/types';
 
-import { RawSendMessage } from './raw-send-message';
+import { RawSendMessage, type SendMessageOptions } from './raw-send-message';
 
 export { RawMessageType, type RawMessage };
 export interface ObjectStringItemMix {
@@ -27,44 +27,86 @@ export interface ObjectStringItemMix {
 }
 
 export class MultiSendMessage extends RawSendMessage {
-  sendTextMessage(content: string, historyMessages?: EnterMessage[]) {
+  // 使用file-cache store来管理文件缓存
+  private fileCacheStore: any;
+
+  constructor(options: SendMessageOptions) {
+    super(options);
+    // 直接从构造函数参数中提取fileCacheStore
+    this.fileCacheStore = options.fileCacheStore || {
+      cachedFiles: [] as any[],
+      addCachedFiles: (files: any[]) => {
+        logger.debug('addCachedFiles', files);
+      },
+      clearAllCache: () => {
+        logger.debug('clearAllCache');
+      },
+      removeFile: (fileId: string) => {
+        logger.debug('removeFile', fileId);
+      },
+    };
+  }
+
+  // 设置file-cache store，供外部注入
+  setFileCacheStore(store: any) {
+    this.fileCacheStore = store;
+  }
+
+  sendTextMessage(content: string) {
     const message: EnterMessage = {
       role: RoleType.User,
       content,
       content_type: 'text',
     };
     this.sendStartMessage(message);
-    this.sendMessage(message, historyMessages);
+    this.sendMessage(message);
   }
-  async sendFileMessage(
-    files: ChooseFileInfo[],
-    historyMessages?: EnterMessage[],
-  ) {
-    const content: ObjectStringItemMix[] = files
-      .map(item => this.packFileObject(item))
-      .filter(item => !!item) as ObjectStringItemMix[];
-    const message: EnterMessage = {
-      role: RoleType.User,
-      content: content as ObjectStringItem[],
-      content_type: 'object_string',
-    };
-    this.sendStartMessage(message);
-    const fileList = await this.uploadFile(files);
-    if (!fileList) {
-      //失败了。
+
+  async sendFileMessage(files: ChooseFileInfo[]) {
+    // 将文件信息缓存到store中
+    // 上传文件并缓存结果
+    const uploadedFiles = await this.uploadFile(files);
+    if (uploadedFiles) {
+      this.fileCacheStore.addCachedFiles(uploadedFiles);
+      logger.debug('sendFileMessage uploadedFiles', uploadedFiles);
+    } else {
+      // 上传失败
       this.sendErrorEvent(
         new MiniChatError(-1, this.i18n.t('sendMessageUploadFailed')),
       );
-      return;
     }
-    this.messageSended.content = JSON.stringify(fileList);
-    message.content = JSON.stringify(
-      fileList.map(item => ({
+    // 文件上传完成后关闭消息发送流程
+  }
+
+  async sendTextAndFileMessage(text: string, historyMessages?: EnterMessage[]) {
+    if (text) {
+      // 从store中获取缓存的文件
+      const cachedFiles = this.fileCacheStore.uploadedFiles || [];
+      logger.debug('sendTextAndFileMessage uploadedFiles', cachedFiles);
+      const fileList = cachedFiles.map((item: any) => ({
         type: item.type,
+        // name: item.name,
+        // file_url: item.file_url,
         file_id: item.file_id,
-      })),
-    );
-    this.sendMessage(message, historyMessages);
+      }));
+      const content = [
+        {
+          type: 'text',
+          text,
+        },
+        ...fileList,
+      ];
+      // 发送文件和文本内容
+      const message: EnterMessage = {
+        role: RoleType.User,
+        content: JSON.stringify(content),
+        content_type: 'object_string',
+      };
+      this.sendStartMessage(message);
+      this.sendMessage(message, historyMessages);
+      // 发送完成后清空缓存
+      this.fileCacheStore.clearAllCache();
+    }
   }
   async sendAudioMessage(audio: AudioRaw, historyMessages?: EnterMessage[]) {
     logger.info('sendAudioMessage audio', audio);
@@ -148,21 +190,29 @@ export class MultiSendMessage extends RawSendMessage {
   }
   private packFileObject(fileInfo: ChooseFileInfo): ObjectStringItemMix | null {
     const type = this.getObjectStringType(fileInfo.type);
+    // 获取文件名，考虑不同来源的情况
+    const fileName =
+      'name' in fileInfo
+        ? fileInfo.name
+        : 'file' in fileInfo && fileInfo.file && 'name' in fileInfo.file
+          ? fileInfo.file.name
+          : '未知文件';
+
     switch (type) {
       case 'image': {
         return {
           type: 'image',
           file_url: fileInfo.tempFilePath,
+          size: String(fileInfo.size), // 直接从fileInfo获取大小并转换为字符串
+          name: fileName,
           file_info: fileInfo,
         };
       }
       case 'file': {
         return {
           type: 'file',
-          // @ts-expect-error -- linter-disable-autofix
-          name: fileInfo.file.name,
-          // @ts-expect-error -- linter-disable-autofix
-          size: fileInfo.file.size,
+          name: fileName,
+          size: String(fileInfo.size), // 直接从fileInfo获取大小并转换为字符串
           file_url: fileInfo.tempFilePath,
           file_info: fileInfo,
         };
@@ -179,13 +229,19 @@ export class MultiSendMessage extends RawSendMessage {
     this.messageSended.rawMessage = rawMessage;
     switch (rawMessage.type) {
       case RawMessageType.TEXT: {
-        return await this.sendTextMessage(rawMessage.data, historyMessages);
+        return await this.sendTextMessage(rawMessage.data);
       }
       case RawMessageType.FILE: {
-        return await this.sendFileMessage(rawMessage.data, historyMessages);
+        return await this.sendFileMessage(rawMessage.data);
       }
       case RawMessageType.AUDIO: {
         return await this.sendAudioMessage(rawMessage.data, historyMessages);
+      }
+      case RawMessageType.TEXT_AND_FILE: {
+        return await this.sendTextAndFileMessage(
+          rawMessage.data,
+          historyMessages,
+        );
       }
       default: {
         throw new MiniChatError(-1, 'unknown message type');

@@ -135,7 +135,7 @@ const ObjectStringItem: FC<IMessageContentProps> = props => {
             case 'image': {
               return (
                 <ImageMessage
-                  url={item.file_url as string}
+                  url={item.file_url || ''} // 提供默认空字符串，避免undefined转换为string的类型问题
                   onImageClick={onImageClick}
                   key={`${item.type}_${index}`}
                 />

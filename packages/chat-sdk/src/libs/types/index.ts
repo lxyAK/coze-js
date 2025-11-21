@@ -9,6 +9,7 @@ export * from './provider/user-info';
 export * from './provider/chat-props';
 export * from './provider/ui-event';
 export * from './provider/chat-input';
+export * from './provider/file-cache';
 
 export * from './services/send-message';
 export * from './services/chat-service';

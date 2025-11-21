@@ -1,0 +1,62 @@
+/* 全局覆盖层样式 */
+.globalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 拖放提示框样式 */
+.dropPrompt {
+  background-color: white;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  min-width: 300px;
+  animation: scaleIn 0.2s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.text {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--chat-font-color-primary, #060709);
+  margin-bottom: 8px;
+}
+
+.subText {
+  font-size: 14px;
+  color: var(--chat-font-color-secondary, rgba(6, 7, 9, 0.6));
+}

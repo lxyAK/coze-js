@@ -2,7 +2,7 @@ export type { AuthConf } from './auth';
 export type { UserInfo } from './user';
 export type { ChatInfo } from './chat';
 
-export type { NonNullableType, NullableType } from './util-type';
+export type { NonNullableType, NullableType, ObjectStringItemMix } from './util-type';
 
 export type {
   ChatMessage,

@@ -1,6 +1,9 @@
 import { type IMiniChatError } from '../utils/error';
 import { type ISendMessage } from '../services/send-message';
 import {
+  type ObjectStringItemMix,
+} from '../../services/helper/message/send-message/multi-send-message';
+import {
   IMessageCallback,
   type ChatMessage,
   type ChatMessageGroup,
@@ -24,6 +27,8 @@ export interface ConversationState {
 
   isUnshiftingMessageFlag: boolean; // 是否正在加载新数据
   scrollTop?: number;
+  cachedFiles: ObjectStringItemMix[]; // 缓存的文件信息
+  cachedLocalFiles: File[]; // 缓存的本地文件
 }
 
 interface ConversationAction {
@@ -47,6 +52,10 @@ interface ConversationAction {
   setPrevError: (error: IMiniChatError) => void;
   setNextError: (error: IMiniChatError) => void;
   clearUnshiftingMessageFlg: (scrollTop?: number) => void;
+  // 缓存文件相关操作
+  setCachedFiles: (files: ObjectStringItemMix[]) => void;
+  setCachedLocalFiles: (files: File[]) => void;
+  clearCachedFiles: () => void;
 
   setSendMessageService: (service: ISendMessage) => void;
   setEventCallbacksAboutMessage: (eventCallbacks?: IMessageCallback) => void;

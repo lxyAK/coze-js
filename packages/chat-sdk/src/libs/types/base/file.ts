@@ -29,4 +29,13 @@ export type ChooseFileInfo =
       tempFilePath: string; // 临时文件地址，图片可用于预览，Taro
       size: number; // 文件大小
       file: File;
+    }
+  | {
+      from: 'H5_Clipboard'; // H5剪贴板粘贴的文件
+      type: FileTypeEnum; // 类型
+      tempFilePath: string; // 临时文件地址
+      size: number; // 文件大小
+      file: File;
+      name: string; // 文件名
+      id: string; // 文件ID
     };

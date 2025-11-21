@@ -21,6 +21,7 @@ import {
   RawMessageType,
 } from './helper/message';
 import { usePersistCallback } from '../hooks';
+import { useCreateFileCacheStore } from '@/libs/provider/store/file-cache';
 // eslint-disable-next-line max-lines-per-function
 export const useSendMessage = () => {
   const {
@@ -34,6 +35,7 @@ export const useSendMessage = () => {
     sectionId: store.sectionId,
     popLastErrorChatGroup: store.popLastErrorChatGroup,
   }));
+  const fileCacheStore = useCreateFileCacheStore();
   const i18n = useI18n();
   const userInfo = useUserInfoStore(store => store.info);
   const botId = useChatInfoStore(store => store.id);
@@ -68,7 +70,21 @@ export const useSendMessage = () => {
           return false;
         }
       }
-
+      if (rawMessage.type === RawMessageType.FILE) {
+        const sendMessageHandler = getSendMessageHandler({
+          botId,
+          chatService,
+          conversationId,
+          userId: userInfo?.id || '',
+          connectorId,
+          sectionId,
+          chatInfo: chatInfo || undefined,
+          i18n,
+          fileCacheStore,
+        });
+        sendMessageHandler.sendRawMessage(rawMessage, historyMessages);
+        return;
+      }
       // Clear task message after message sended
       setTaskList({ taskList: [] });
       setIsDeleting(true);
@@ -81,6 +97,7 @@ export const useSendMessage = () => {
         sectionId,
         chatInfo: chatInfo || undefined,
         i18n,
+        fileCacheStore,
       });
 
       sendMessageHandler.on(SendMessageEvent.RequireAction, event => {
@@ -111,21 +128,31 @@ export const useSendMessage = () => {
       sendMessageHandler.sendRawMessage(rawMessage, historyMessages);
     },
   );
-
+  // ! 发送文本消息
   const sendTextMessage = useCallback(
     async (content: string) =>
       await sendMessage({
-        type: RawMessageType.TEXT,
+        type: RawMessageType.TEXT_AND_FILE,
         data: content,
       }),
     [sendMessage],
   );
+  /**
+   * !发送文件消息
+   * 问题: 附件直接发送了没有携带文本，所以需要发送一个文本消息
+   * 后期优化: 上传附件后不直接调用 sendMessage
+   */
   const sendFileMessage = useCallback(
-    async (files: ChooseFileInfo[]) =>
-      await sendMessage({
+    async (files: ChooseFileInfo[]) => {
+      // await sendMessage({
+      //   type: RawMessageType.TEXT,
+      //   data: '帮我分析这个图片的内容',
+      // });
+      return await sendMessage({
         type: RawMessageType.FILE,
         data: files,
-      }),
+      });
+    },
     [sendMessage],
   );
 

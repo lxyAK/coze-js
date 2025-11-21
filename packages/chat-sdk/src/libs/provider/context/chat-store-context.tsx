@@ -13,6 +13,7 @@ import type {
   ChatPropsStore,
   UiEventStore,
   ChatInputStore,
+  FileCacheStore,
 } from '@/libs/types';
 import { NullableType, Language } from '@/libs/types';
 import {
@@ -32,6 +33,8 @@ import {
   type CreateUiEventStore,
   useCreateChatInputStore,
   type CreateChatInputStore,
+  useCreateFileCacheStore,
+  type CreateFileCacheStore,
 } from '@/libs/provider/store';
 import { I18n as I18nLocal } from '@/libs/i18n';
 import { useValidContext } from '@/libs/hooks';
@@ -49,6 +52,7 @@ enum StoreType {
   ChatPropsStore,
   UiEvent,
   ChatInputStore,
+  FileCacheStore,
 }
 
 interface StoreContextInter {
@@ -61,6 +65,7 @@ interface StoreContextInter {
   [StoreType.ChatPropsStore]: CreateChatPropsStore;
   [StoreType.UiEvent]: CreateUiEventStore;
   [StoreType.ChatInputStore]: CreateChatInputStore;
+  [StoreType.FileCacheStore]: CreateFileCacheStore;
 }
 
 const ChatStoreContext = createContext<NullableType<StoreContextInter>>({
@@ -73,6 +78,7 @@ const ChatStoreContext = createContext<NullableType<StoreContextInter>>({
   [StoreType.ChatPropsStore]: null,
   [StoreType.UiEvent]: null,
   [StoreType.ChatInputStore]: null,
+  [StoreType.FileCacheStore]: null,
 });
 
 /*** End store的定义位置 */
@@ -93,6 +99,7 @@ export const ChatStoreProvider: FC<PropsWithChildren> = ({ children }) => {
   const chatPropsStore = useCreateChatPropsStore();
   const uiEventStore = useCreateUiEventStore();
   const chatInputStore = useCreateChatInputStore();
+  const fileCacheStore = useCreateFileCacheStore();
   const i18nLocal = useMemo(
     () => setting?.i18n || new I18nLocal(setting?.language || Language.ZH_CN),
     [],
@@ -108,6 +115,7 @@ export const ChatStoreProvider: FC<PropsWithChildren> = ({ children }) => {
       [StoreType.ChatPropsStore]: chatPropsStore,
       [StoreType.UiEvent]: uiEventStore,
       [StoreType.ChatInputStore]: chatInputStore,
+      [StoreType.FileCacheStore]: fileCacheStore,
     }),
     [],
   );
@@ -204,6 +212,17 @@ export const useChatInputStore: <T>(
   const store = useChatStoreContext();
   return useStoreWithEqualityFn(
     store[StoreType.ChatInputStore],
+    selector,
+    shallow,
+  );
+};
+
+export const useFileCacheStore: <T>(
+  selector: (store: FileCacheStore) => T,
+) => T = selector => {
+  const store = useChatStoreContext();
+  return useStoreWithEqualityFn(
+    store[StoreType.FileCacheStore],
     selector,
     shallow,
   );

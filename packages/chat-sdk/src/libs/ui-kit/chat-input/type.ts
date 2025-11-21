@@ -25,7 +25,7 @@ export interface IChatInputProps {
   isPcMode?: boolean;
   isFrameAutoFocus?: boolean;
   onKeyBoardHeightChange?: (height: number) => void;
-  onSendTextMessage?: (text: string) => Promise<boolean | undefined>;
+  onSendTextMessage?: (text: string, files?: ChooseFileInfo[]) => Promise<boolean | undefined>;
   onSendFileMessage?: (files: ChooseFileInfo[]) => Promise<boolean | undefined>;
   onSendAudioMessage?: (audio: AudioRaw) => Promise<boolean | undefined>;
   onAudioRecording?: (isRecording: boolean) => Promise<boolean | undefined>;

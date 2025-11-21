@@ -10,19 +10,21 @@ import cls from 'classnames';
 import { View } from '@tarojs/components';
 
 import { isWeb, logger, nanoid } from '@/libs/utils';
-
+import { ChooseFileInfo } from '@/libs/types';
 import { Spacing } from '../atomic/spacing';
 import { DisableContainer } from '../atomic/disable-container';
 import { UploadBtn } from './upload-btn';
 import { InputType, type IChatInputProps } from './type';
 import { Textarea } from './textarea';
-import { TaskMessage } from './task-message/indext';
+import { TaskMessage } from './task-message/index';
 import { SendSwitchBtn } from './send-switch-btn';
 import { useTextInputHandle } from './hooks/use-text-input-handle';
 import { useMultiModeMessageHandle } from './hooks/use-multi-mode-message-handle';
 import { useKeyboardHeightHandle } from './hooks/use-keyborader-height-handle';
 import { useAudioMessageHandle } from './hooks/use-audio-message-handle';
 import { AudioInput } from './audio-input';
+import { AttachmentManager } from './attachment-manager';
+import { useFileCacheStore } from '@/libs/provider/context/chat-store-context';
 
 import styles from './index.module.less';
 let inputNo = 1000;
@@ -43,6 +45,21 @@ export const ChatInput = forwardRef(
       isPcMode,
       defaultInputType = InputType.Text,
     } = props;
+    
+    const fileCacheStore = useFileCacheStore(store => store);
+    const { cachedFiles: uploadedFiles, removeFile } = fileCacheStore; // 保持变量名向后兼容
+    
+    const handleAddFiles = (files: ChooseFileInfo[]) => {
+      // 关键点：只调用onSendFileMessage，不再直接处理本地文件缓存
+      // 假设onSendFileMessage内部会负责文件上传并调用addUploadedFiles添加成功上传的文件到store
+      if (onSendFileMessage) {
+        onSendFileMessage(files);
+      }
+    };
+    
+    const handleRemoveFile = (fileId: string) => {
+      removeFile(fileId);
+    };
     const inputId = useMemo(() => `chat-input-${nanoid()}-${inputNo++}`, []);
     const [inputType, setInputType] = useState<InputType>(defaultInputType);
     const { onRecording, isRecording, isRealAudioInputFocusing } =
@@ -80,7 +97,20 @@ export const ChatInput = forwardRef(
     });
 
     return (
-      <DisableContainer className={styles.container}>
+      <DisableContainer className={cls(styles.container, { [styles.focused]: focused || isRealAudioInputFocusing })}>
+        {/* 附件管理区域 - 移到外部实现上下分离 */}
+        {isNeedUpload && inputType === InputType.Text && !isShowMultiModeMessage && (
+          <>
+            <AttachmentManager
+              uploadedFiles={uploadedFiles}
+              onAddFiles={handleAddFiles}
+              onRemoveFile={handleRemoveFile}
+              disabled={disabled}
+            />
+            <View className={styles.dividerBetweenSections} />
+          </>
+        )}
+        
         <View
           className={cls(styles['chat-input-container'], {
             [styles.focused]: focused || isRealAudioInputFocusing,
@@ -95,6 +125,7 @@ export const ChatInput = forwardRef(
           ) : null}
 
           <Spacing className={styles['chat-input-content']}>
+            
             {inputType === InputType.Voice ? (
               <AudioInput
                 onSendAudioMessage={onSendAudioMessage}
@@ -135,7 +166,7 @@ export const ChatInput = forwardRef(
               {isNeedUpload ? (
                 <>
                   <UploadBtn
-                    onSendFileMessage={onSendFileMessage}
+                    onSendFileMessage={handleAddFiles}
                     frameEventTarget={frameEventTarget}
                     disabled={disabled}
                   />

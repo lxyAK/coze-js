@@ -6,9 +6,10 @@ export enum Region {
 export const getRegionApi = (region?: Region) => {
   switch (region) {
     case 'oversea':
-      return 'https://api.coze.com';
+      return 'http://1.95.127.205:8888';
     default: {
-      return 'https://api.coze.cn';
+      // return 'http://1.95.127.205:8888';
+      return 'https://ai.cs4pl.com';
     }
   }
 };

@@ -16,6 +16,7 @@ import {
   IChatService,
   ChatInfo,
 } from '@/libs/types';
+import type { CreateFileCacheStore } from '@/libs/provider/store/file-cache';
 import { I18n } from '@/libs/i18n';
 
 export interface SendMessageOptions {
@@ -27,6 +28,7 @@ export interface SendMessageOptions {
   connectorId: string;
   sectionId?: string;
   i18n: I18n;
+  fileCacheStore?: CreateFileCacheStore;
 }
 
 export abstract class RawSendMessage implements ISendMessage {

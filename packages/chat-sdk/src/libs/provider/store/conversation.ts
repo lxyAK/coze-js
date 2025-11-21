@@ -101,6 +101,8 @@ const defaultData = {
   sendMessageService: undefined,
   inProcessChatMessageGroup: undefined,
   isUnshiftingMessageFlag: false,
+  cachedFiles: [],
+  cachedLocalFiles: [],
 };
 // eslint-disable-next-line max-lines-per-function
 const createConversationStore = ({ eventCallbacks }: ChatFrameworkProps) => {
@@ -204,6 +206,23 @@ const createConversationStore = ({ eventCallbacks }: ChatFrameworkProps) => {
       setNextError: error => {
         set({
           nextError: error,
+        });
+      },
+      // 缓存文件相关操作实现
+      setCachedFiles: files => {
+        set({
+          cachedFiles: files,
+        });
+      },
+      setCachedLocalFiles: files => {
+        set({
+          cachedLocalFiles: files,
+        });
+      },
+      clearCachedFiles: () => {
+        set({
+          cachedFiles: [],
+          cachedLocalFiles: [],
         });
       },
       setSendMessageService: service => {

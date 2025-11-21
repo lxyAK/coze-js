@@ -183,9 +183,9 @@ export class AsyncSendMessage extends MultiSendMessage {
         }
       }
     } catch (error) {
-      // ! 错误消息在@coze/api json解析问题
+      // ! 错误消息在coze
       logger.error('asyncChat pollAnswer error', error);
-      // this.sendErrorEvent(new MiniChatError(-1, this.i18n.t('sendFailed')));
+      this.sendErrorEvent(new MiniChatError(-1, this.i18n.t('sendFailed')));
       return;
     }
   }
